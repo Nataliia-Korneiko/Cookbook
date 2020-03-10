@@ -74,7 +74,23 @@ describe('App component', () => {
     expect(wrapped.find(RecipeEditor).length).toBe(0);
   });
 
-  it('renders a button', () => {
+  it('renders one header', () => {
+    expect(wrapped.find('header.recipes__header').length).toBe(1);
+  });
+
+  it('renders one main', () => {
+    expect(wrapped.find('main.recipes__main').length).toBe(1);
+  });
+
+  it('renders five div', () => {
+    expect(wrapped.find('div').length).toBe(5);
+  });
+
+  it('renders one button', () => {
     expect(wrapped.find('button[type="button"]').length).toBe(1);
+  });
+
+  it('renders one p', () => {
+    expect(wrapped.find('p.recipes__description').length).toBe(1);
   });
 });
