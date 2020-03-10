@@ -1,6 +1,5 @@
 {
-  "recipes": [
-    {
+  "recipes": [{
       "text": "Bacon & roast onion salad",
       "description": "Ingredients:\n1 red onion, cut into 8 wedges, root left intact\n2 tbsp olive oil, plus extra for drizzling (optional)\nhandful of peas (fresh or frozen)\n1 tsp sherry vinegar\n1 tsp Dijon mustard\n2 slices smoked streaky bacon\n1 slice of bread, cut into cubes\n1 Baby Gem lettuce, leaves torn\n\nMethod:\n1. Heat oven to 220C/200C fan/gas 7. Arrange the onion wedges on one side of a baking tray. Drizzle with ½ tbsp of the olive oil and season. Put in the oven and roast for 15 mins.\n2. Meanwhile, cook the peas in boiling water for 2 mins, drain and rinse in very cold water. Set aside.\n3. Make the dressing by mixing together another ½ tbsp of the oil, the vinegar, mustard and seasoning. Turn the onions, and put the bacon slices and bread next to them on the baking tray. Drizzle the remaining oil over the bread. Return the tray to the oven for 12 mins more, until the bacon and bread are golden.\n4. Put the lettuce and peas in a bowl, add the dressing and toss to combine. Arrange the onion and bread on top. Break up the bacon slightly and scatter over. Drizzle with a little more olive oil, if you like, and eat straight away.",
       "level": "low",
@@ -63,38 +62,6 @@
       "createDate": "March 9th 2020, 10:30:21 AM",
       "editDate": "",
       "id": 8
-    },
-    {
-      "text": "Test 1",
-      "description": "",
-      "level": "normal",
-      "createDate": "March 9th 2020, 10:30:31 AM",
-      "editDate": "March 9th 2020, 10:31:00 AM",
-      "id": 9
-    },
-    {
-      "text": "Test 2",
-      "description": "",
-      "level": "high",
-      "createDate": "March 9th 2020, 10:30:36 AM",
-      "editDate": "March 9th 2020, 10:44:24 AM",
-      "id": 10
-    },
-    {
-      "text": "Test 3",
-      "description": "",
-      "level": "low",
-      "createDate": "March 9th 2020, 10:30:45 AM",
-      "editDate": "March 9th 2020, 11:37:14 AM",
-      "id": 11
-    },
-    {
-      "text": "Test 4",
-      "description": "",
-      "level": "high",
-      "createDate": "March 9th 2020, 10:30:53 AM",
-      "editDate": "March 9th 2020, 10:50:10 PM",
-      "id": 12
     }
   ]
 }
