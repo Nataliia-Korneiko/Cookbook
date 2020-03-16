@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Legend from '../Legend';
 
-describe('Legend', () => {
+describe('Legend component', () => {
   const props = {
     items: [
       { level: 'low', color: '#4caf50' },

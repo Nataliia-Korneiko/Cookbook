@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Recipe from '../Recipe';
 
-describe('Recipe', () => {
+describe('Recipe component', () => {
   const props = {
     text: '',
     description: '',

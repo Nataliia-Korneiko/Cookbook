@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import RecipeList from '../RecipeList';
 import Recipe from '../../Recipe/Recipe';
 
-describe('RecipeList', () => {
+describe('RecipeList component', () => {
   const props = {
     items: [{ id: 1 }],
     onDeleteRecipe: () => null,

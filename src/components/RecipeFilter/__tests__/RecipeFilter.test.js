@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import RecipeFilter from '../RecipeFilter';
 
-describe('RecipeFilter', () => {
+describe('RecipeFilter component', () => {
   const props = {
     value: '',
     onChangeFilter: () => null,

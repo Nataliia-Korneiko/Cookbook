@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import LevelSelector from '../LevelSelector';
 
-describe('LevelSelector', () => {
+describe('LevelSelector component', () => {
   const props = {
     options: ['low', 'normal', 'high'],
     value: '',

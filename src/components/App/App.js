@@ -32,11 +32,39 @@ export default class App extends Component {
   };
 
   /* Get recipes */
+  // componentDidMount() {
+  //   API.fetchRecipes().then(recipes => {
+  //     this.setState({ recipes });
+  //   });
+  // }
+
+  // ----------
+  /* Get recipes */
   componentDidMount() {
-    API.fetchRecipes().then(recipes => {
-      this.setState({ recipes });
-    });
+    API.fetchRecipes()
+      .then(recipes => {
+        this.setState({ recipes });
+        localStorage.setItem('recipes', JSON.stringify(recipes));
+      })
+      .catch(() => {
+        const recipes = localStorage.getItem('recipes');
+        if (recipes) {
+          this.setState({ recipes: JSON.parse(recipes) });
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { recipes } = this.state;
+
+    if (prevState.recipes !== recipes) {
+      localStorage.setItem('recipes', JSON.stringify(recipes));
+    }
+  }
+  // ----------
 
   changeFilter = e => {
     this.setState({ filter: e.target.value });
