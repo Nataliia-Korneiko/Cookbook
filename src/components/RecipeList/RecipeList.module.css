@@ -48,4 +48,8 @@
   .recipes__item {
     margin-right: 0;
   }
+
+  .recipes__item:not(:nth-last-child(-n + 1)) {
+    margin-bottom: 40px;
+  }
 }
