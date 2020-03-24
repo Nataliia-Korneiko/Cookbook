@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import shortid from 'shortid';
 import RecipeEditor from '../RecipeEditor/RecipeEditor';
 import RecipeList from '../RecipeList/RecipeList';
 import RecipeFilter from '../RecipeFilter/RecipeFilter';
 import Modal from '../Modal/Modal';
 import Legend from '../Legend/Legend';
 import Level from '../../utils/Level';
-import * as API from '../../services/recipes-api';
 import s from './App.module.css';
 
 const moment = require('moment');
@@ -33,9 +33,28 @@ export default class App extends Component {
 
   /* Get recipes */
   componentDidMount() {
-    API.fetchRecipes().then(recipes => {
-      this.setState({ recipes });
-    });
+    try {
+      const messageError = 'Whoops, something went wrong!';
+      const recipesToAdd = localStorage.getItem('recipes');
+
+      if (recipesToAdd) {
+        const recipes = JSON.parse(recipesToAdd);
+
+        this.setState({ recipes });
+      } else {
+        throw new Error(messageError);
+      }
+    } catch (messageError) {
+      console.error(messageError);
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { recipes } = this.state;
+
+    if (prevState.recipes !== recipes) {
+      localStorage.setItem('recipes', JSON.stringify(recipes));
+    }
   }
 
   changeFilter = e => {
@@ -43,47 +62,45 @@ export default class App extends Component {
   };
 
   /* Create recipe */
-  openCreateRecipeModal = () => {
+  openCreateModal = () => {
     this.setState({ isCreating: true });
   };
 
-  closeCreateRecipeModal = () => {
+  closeCreateModal = () => {
     this.setState({ isCreating: false });
   };
 
   addRecipe = recipe => {
     const recipeToAdd = {
       ...recipe,
+      id: shortid.generate(),
       createDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
     };
 
-    API.postRecipe(recipeToAdd)
-      .then(addedRecipe => {
-        this.setState(state => ({
-          recipes: [...state.recipes, addedRecipe],
-        }));
-      })
-      .finally(this.closeCreateRecipeModal);
+    this.setState(
+      state => ({
+        recipes: [...state.recipes, recipeToAdd],
+      }),
+      this.closeCreateModal,
+    );
   };
 
   /* Delete recipe */
   deleteRecipe = id => {
-    API.deleteRecipe(id).then(() => {
-      this.setState(state => ({
-        recipes: state.recipes.filter(recipe => recipe.id !== id),
-      }));
-    });
+    this.setState(state => ({
+      recipes: state.recipes.filter(recipe => recipe.id !== id),
+    }));
   };
 
   /* Update recipe */
-  openEditRecipeModal = id => {
+  openEditModal = id => {
     this.setState({
       isEditing: true,
       selectedRecipeId: id,
     });
   };
 
-  closeEditRecipeModal = () => {
+  closeEditModal = () => {
     this.setState({
       isEditing: false,
       selectedRecipeId: null,
@@ -91,21 +108,22 @@ export default class App extends Component {
   };
 
   updateRecipe = ({ text, description, level }) => {
-    API.updateRecipe(this.state.selectedRecipeId, {
-      text,
-      description,
-      level,
-      editDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
-    }).then(updateRecipe => {
-      this.setState(
-        state => ({
-          recipes: state.recipes.map(recipe =>
-            recipe.id === state.selectedRecipeId ? updateRecipe : recipe,
-          ),
-        }),
-        this.closeEditRecipeModal,
-      );
-    });
+    this.setState(
+      state => ({
+        recipes: state.recipes.map(recipe =>
+          recipe.id === state.selectedRecipeId
+            ? {
+                ...recipe,
+                text,
+                description,
+                level,
+                editDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
+              }
+            : recipe,
+        ),
+      }),
+      this.closeEditModal,
+    );
   };
 
   render() {
@@ -117,7 +135,10 @@ export default class App extends Component {
       selectedRecipeId,
     } = this.state;
     const filteredRecipes = filterRecipes(recipes, filter);
-    const recipeInEdit = recipes.find(r => r.id === selectedRecipeId);
+    let recipeInEdit = null;
+    if (isEditing) {
+      recipeInEdit = recipes.find(recipe => recipe.id === selectedRecipeId);
+    }
 
     return (
       <div>
@@ -126,7 +147,7 @@ export default class App extends Component {
             <button
               className={s.recipes__button}
               type="button"
-              onClick={this.openCreateRecipeModal}
+              onClick={this.openCreateModal}
             >
               Add recipe
             </button>
@@ -151,21 +172,21 @@ export default class App extends Component {
             <RecipeList
               items={filteredRecipes}
               onDeleteRecipe={this.deleteRecipe}
-              onEditRecipe={this.openEditRecipeModal}
+              onEditRecipe={this.openEditModal}
             />
             {isCreating && (
-              <Modal onClose={this.closeCreateRecipeModal}>
+              <Modal onClose={this.closeCreateModal}>
                 <RecipeEditor
                   onSave={this.addRecipe}
-                  onCancel={this.closeCreateRecipeModal}
+                  onCancel={this.closeCreateModal}
                 />
               </Modal>
             )}
             {isEditing && (
-              <Modal onClose={this.closeEditRecipeModal}>
+              <Modal onClose={this.closeEditModal}>
                 <RecipeEditor
                   onSave={this.updateRecipe}
-                  onCancel={this.closeEditRecipeModal}
+                  onCancel={this.closeEditModal}
                   text={recipeInEdit.text}
                   description={recipeInEdit.description}
                   level={recipeInEdit.level}

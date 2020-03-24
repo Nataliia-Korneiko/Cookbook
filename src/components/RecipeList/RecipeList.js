@@ -12,7 +12,7 @@ const RecipeList = ({ items, onDeleteRecipe, onEditRecipe }) =>
           <Recipe
             {...item}
             onDeleteRecipe={() => onDeleteRecipe(item.id)}
-            onEdit={() => onEditRecipe(item.id)}
+            onEditRecipe={() => onEditRecipe(item.id)}
           />
         </li>
       ))}
@@ -22,7 +22,7 @@ const RecipeList = ({ items, onDeleteRecipe, onEditRecipe }) =>
 RecipeList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
   onDeleteRecipe: PropTypes.func.isRequired,

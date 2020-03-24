@@ -9,7 +9,7 @@ const Recipe = ({
   createDate,
   editDate,
   onDeleteRecipe,
-  onEdit,
+  onEditRecipe,
 }) => (
   <div className={`${s.recipe} ${s[`${level}__level`]}`}>
     <div className={s.recipe__spans}>
@@ -33,7 +33,7 @@ const Recipe = ({
         Delete
       </button>
 
-      <button className={s.recipe__button} type="button" onClick={onEdit}>
+      <button className={s.recipe__button} type="button" onClick={onEditRecipe}>
         Edit
       </button>
     </div>
@@ -52,7 +52,7 @@ Recipe.propTypes = {
   createDate: PropTypes.string,
   editDate: PropTypes.string,
   onDeleteRecipe: PropTypes.func.isRequired,
-  onEdit: PropTypes.func.isRequired,
+  onEditRecipe: PropTypes.func.isRequired,
 };
 
 export default Recipe;
