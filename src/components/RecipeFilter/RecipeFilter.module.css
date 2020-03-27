@@ -21,7 +21,7 @@
   color: #171718;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1300px) {
   .recipes__input {
     width: 300px;
   }

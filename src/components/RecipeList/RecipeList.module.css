@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
+  height: 427px;
+  overflow-y: scroll;
 }
 
 .recipes__item:not(:nth-child(4n)) {

@@ -1,203 +1,30 @@
-import React, { Component } from 'react';
-import shortid from 'shortid';
-import RecipeEditor from '../RecipeEditor/RecipeEditor';
-import RecipeList from '../RecipeList/RecipeList';
-import RecipeFilter from '../RecipeFilter/RecipeFilter';
-import Modal from '../Modal/Modal';
-import Legend from '../Legend/Legend';
-import Level from '../../utils/Level';
-import s from './App.module.css';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import routes from '../../routes/routes';
+// import Header from '../Header/Header';
+// import Footer from '../Footer/Footer';
+import HomePage from '../../pages/HomePage/HomePage';
+import AboutPage from '../../pages/AboutPage/AboutPage';
+import MyRecipesPage from '../../pages/MyRecipesPage/MyRecipesPage';
+import LogInPage from '../../pages/LogInPage/LogInPage';
+import SignUpPage from '../../pages/SignUpPage/SignUpPage';
+import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 
-const moment = require('moment');
-
-const filterRecipes = (recipes, filter) => {
-  return recipes.filter(recipe =>
-    recipe.text.toLowerCase().includes(filter.toLowerCase()),
+const App = () => {
+  return (
+    <>
+      {/* <Header /> */}
+      <Switch>
+        <Route path={routes.HOME} exact component={HomePage} />
+        <Route path={routes.ABOUT} component={AboutPage} />
+        <Route path={routes.MY_RECIPES} component={MyRecipesPage} />
+        <Route path={routes.LOG_IN} component={LogInPage} />
+        <Route path={routes.SIGN_UP} component={SignUpPage} />
+        <Route path="*" component={NotFoundPage} />
+      </Switch>
+      {/* <Footer /> */}
+    </>
   );
 };
 
-const legendOptions = [
-  { level: Level.LOW, color: '#4caf50' },
-  { level: Level.NORMAL, color: '#2196f3' },
-  { level: Level.HIGH, color: '#f44336' },
-];
-
-export default class App extends Component {
-  state = {
-    recipes: [],
-    filter: '',
-    isCreating: false,
-    isEditing: false,
-    selectedRecipeId: null,
-  };
-
-  /* Get recipes */
-  componentDidMount() {
-    try {
-      const messageError = 'Whoops, something went wrong!';
-      const recipesToAdd = localStorage.getItem('recipes');
-
-      if (recipesToAdd) {
-        const recipes = JSON.parse(recipesToAdd);
-
-        this.setState({ recipes });
-      } else {
-        throw new Error(messageError);
-      }
-    } catch (messageError) {
-      console.error(messageError);
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const { recipes } = this.state;
-
-    if (prevState.recipes !== recipes) {
-      localStorage.setItem('recipes', JSON.stringify(recipes));
-    }
-  }
-
-  changeFilter = e => {
-    this.setState({ filter: e.target.value });
-  };
-
-  /* Create recipe */
-  openCreateModal = () => {
-    this.setState({ isCreating: true });
-  };
-
-  closeCreateModal = () => {
-    this.setState({ isCreating: false });
-  };
-
-  addRecipe = recipe => {
-    const recipeToAdd = {
-      ...recipe,
-      id: shortid.generate(),
-      createDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
-    };
-
-    this.setState(
-      state => ({
-        recipes: [...state.recipes, recipeToAdd],
-      }),
-      this.closeCreateModal,
-    );
-  };
-
-  /* Delete recipe */
-  deleteRecipe = id => {
-    this.setState(state => ({
-      recipes: state.recipes.filter(recipe => recipe.id !== id),
-    }));
-  };
-
-  /* Update recipe */
-  openEditModal = id => {
-    this.setState({
-      isEditing: true,
-      selectedRecipeId: id,
-    });
-  };
-
-  closeEditModal = () => {
-    this.setState({
-      isEditing: false,
-      selectedRecipeId: null,
-    });
-  };
-
-  updateRecipe = ({ text, description, level }) => {
-    this.setState(
-      state => ({
-        recipes: state.recipes.map(recipe =>
-          recipe.id === state.selectedRecipeId
-            ? {
-                ...recipe,
-                text,
-                description,
-                level,
-                editDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
-              }
-            : recipe,
-        ),
-      }),
-      this.closeEditModal,
-    );
-  };
-
-  render() {
-    const {
-      recipes,
-      filter,
-      isCreating,
-      isEditing,
-      selectedRecipeId,
-    } = this.state;
-    const filteredRecipes = filterRecipes(recipes, filter);
-    let recipeInEdit = null;
-    if (isEditing) {
-      recipeInEdit = recipes.find(recipe => recipe.id === selectedRecipeId);
-    }
-
-    return (
-      <div>
-        <header className={s.recipes__header}>
-          <div className={s.container}>
-            <button
-              className={s.recipes__button}
-              type="button"
-              onClick={this.openCreateModal}
-            >
-              Add recipe
-            </button>
-            <div className={s.recipes__quote}>
-              <p className={s.recipes__description}>
-                &#34; It is important to experiment and endlessly seek after
-                creating the best possible flavours when preparing foods. That
-                means not being afraid to experiment with various
-                ingredients.&#34;
-              </p>
-              <p className={s.recipes__author}>Rocco DiSpirito</p>
-            </div>
-          </div>
-        </header>
-
-        <main className={s.recipes__main}>
-          <div className={s.container}>
-            <div className={s.recipes__wrapper}>
-              <RecipeFilter value={filter} onChangeFilter={this.changeFilter} />
-              <Legend items={legendOptions} />
-            </div>
-            <RecipeList
-              items={filteredRecipes}
-              onDeleteRecipe={this.deleteRecipe}
-              onEditRecipe={this.openEditModal}
-            />
-            {isCreating && (
-              <Modal onClose={this.closeCreateModal}>
-                <RecipeEditor
-                  onSave={this.addRecipe}
-                  onCancel={this.closeCreateModal}
-                />
-              </Modal>
-            )}
-            {isEditing && (
-              <Modal onClose={this.closeEditModal}>
-                <RecipeEditor
-                  onSave={this.updateRecipe}
-                  onCancel={this.closeEditModal}
-                  text={recipeInEdit.text}
-                  description={recipeInEdit.description}
-                  level={recipeInEdit.level}
-                  createDate={recipeInEdit.createDate}
-                  editDate={recipeInEdit.editDate}
-                />
-              </Modal>
-            )}
-          </div>
-        </main>
-      </div>
-    );
-  }
-}
+export default App;

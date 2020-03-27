@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+  width: 1260px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* min-height: 568px; */
+  /* background-image: url(../../assets/img/backdrop-03.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  background-color: #b2e9ff;
+}
+
+.main {
+  position: relative;
+  flex: 1 0 auto;
+
+  background-image: url(../../assets/page-01.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
