@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "55ab67d7d8cb1da7cca12b958e99c05e",
+    "revision": "e281582d78bf1dcb51ec61499be3ed35",
     "url": "/cookbook/index.html"
   },
   {
-    "revision": "383e510c16534b4ff5cd",
-    "url": "/cookbook/static/css/main.8b127f1b.chunk.css"
+    "revision": "bce57888212b3e8bd780",
+    "url": "/cookbook/static/css/main.c06e65b1.chunk.css"
   },
   {
-    "revision": "f4f6743ab5b03dc2d21c",
-    "url": "/cookbook/static/js/2.76f18ea5.chunk.js"
+    "revision": "cb9258dae038291688ee",
+    "url": "/cookbook/static/js/2.0594b3f1.chunk.js"
   },
   {
-    "revision": "b5a01430b9928300ee798657f45fe7d4",
-    "url": "/cookbook/static/js/2.76f18ea5.chunk.js.LICENSE.txt"
+    "revision": "6d6c0d1371e570614ef23e12cbfed171",
+    "url": "/cookbook/static/js/2.0594b3f1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "383e510c16534b4ff5cd",
-    "url": "/cookbook/static/js/main.fb49aa3c.chunk.js"
+    "revision": "bce57888212b3e8bd780",
+    "url": "/cookbook/static/js/main.a1ce4be8.chunk.js"
   },
   {
     "revision": "00bbaa9f9de6059476b9",
@@ -56,6 +56,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cookbook/static/media/dancing-script-v14-latin-regular.5c1198f3.woff2"
   },
   {
+    "revision": "ae6efdf9285777770593d1ec6e14c297",
+    "url": "/cookbook/static/media/icon-burger.ae6efdf9.svg"
+  },
+  {
+    "revision": "3a20da0d3b295dde292d4ae325ff57c7",
+    "url": "/cookbook/static/media/logo.3a20da0d.png"
+  },
+  {
     "revision": "4ee09a92e70ae085a8325f1c506cc857",
     "url": "/cookbook/static/media/marck-script-v10-cyrillic-regular.4ee09a92.woff"
   },
@@ -78,5 +86,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bc3aa95dca08f5fee5291e34959c27bc",
     "url": "/cookbook/static/media/montserrat-v14-latin-regular.bc3aa95d.woff2"
+  },
+  {
+    "revision": "af320097d3dc848f637ffa327f74c45a",
+    "url": "/cookbook/static/media/page-01.af320097.png"
+  },
+  {
+    "revision": "a6696f391f87d2803e697dd57f7a9777",
+    "url": "/cookbook/static/media/zero-02.a6696f39.png"
   }
 ]);
