@@ -8,6 +8,7 @@ const AboutPage = () => {
     <div className={s.wrapper}>
       <Header />
       <main className={`${s.main} ${s.container}`} />
+      {/* <img src={paper} alt="zero" className={s.zero} width="700" /> */}
       <Footer />
     </div>
   );

@@ -8,11 +8,11 @@
   flex-direction: column;
   height: 100vh;
   /* min-height: 568px; */
-  /* background-image: url(../../assets/img/backdrop-03.png);
+  background-image: url(../../assets/img/backdrop-02.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; */
-  background-color: wheat;
+  background-size: cover;
+  /* background-color: wheat; */
 }
 
 .main {

@@ -9,6 +9,8 @@
   height: 100vh;
   min-height: 700px;
   background-image: url(../../assets/img/backdrop-02.jpg);
+  /* background-image: url(../../assets/img/backdrop-04.jpeg); */
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
