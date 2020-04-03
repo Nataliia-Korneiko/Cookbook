@@ -4,7 +4,7 @@ import s from './RecipeFilter.module.css';
 
 const RecipeFilter = ({ value, onChangeFilter }) => (
   <input
-    className={s.recipes__input}
+    className={s.input}
     type="text"
     value={value}
     onChange={onChangeFilter}

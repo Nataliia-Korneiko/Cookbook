@@ -1,8 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import routes from '../../routes/routes';
-// import Header from '../Header/Header';
-// import Footer from '../Footer/Footer';
 import HomePage from '../../pages/HomePage/HomePage';
 import AboutPage from '../../pages/AboutPage/AboutPage';
 import MyRecipesPage from '../../pages/MyRecipesPage/MyRecipesPage';
@@ -13,7 +11,6 @@ import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 const App = () => {
   return (
     <>
-      {/* <Header /> */}
       <Switch>
         <Route path={routes.HOME} exact component={HomePage} />
         <Route path={routes.ABOUT} component={AboutPage} />
@@ -22,7 +19,6 @@ const App = () => {
         <Route path={routes.SIGN_UP} component={SignUpPage} />
         <Route path="*" component={NotFoundPage} />
       </Switch>
-      {/* <Footer /> */}
     </>
   );
 };

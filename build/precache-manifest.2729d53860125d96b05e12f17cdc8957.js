@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e281582d78bf1dcb51ec61499be3ed35",
+    "revision": "c640971385ef09d4e047a5284c58503e",
     "url": "/cookbook/index.html"
   },
   {
-    "revision": "bce57888212b3e8bd780",
-    "url": "/cookbook/static/css/main.c06e65b1.chunk.css"
+    "revision": "9cfab03e5452203746b8",
+    "url": "/cookbook/static/css/main.237123d3.chunk.css"
   },
   {
     "revision": "cb9258dae038291688ee",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cookbook/static/js/2.0594b3f1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bce57888212b3e8bd780",
-    "url": "/cookbook/static/js/main.a1ce4be8.chunk.js"
+    "revision": "9cfab03e5452203746b8",
+    "url": "/cookbook/static/js/main.4d99420d.chunk.js"
   },
   {
     "revision": "00bbaa9f9de6059476b9",
@@ -56,6 +56,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cookbook/static/media/dancing-script-v14-latin-regular.5c1198f3.woff2"
   },
   {
+    "revision": "a6696f391f87d2803e697dd57f7a9777",
+    "url": "/cookbook/static/media/dish-01.a6696f39.png"
+  },
+  {
     "revision": "ae6efdf9285777770593d1ec6e14c297",
     "url": "/cookbook/static/media/icon-burger.ae6efdf9.svg"
   },
@@ -90,9 +94,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "af320097d3dc848f637ffa327f74c45a",
     "url": "/cookbook/static/media/page-01.af320097.png"
-  },
-  {
-    "revision": "a6696f391f87d2803e697dd57f7a9777",
-    "url": "/cookbook/static/media/zero-02.a6696f39.png"
   }
 ]);

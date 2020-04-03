@@ -1,4 +1,4 @@
-.recipes__input {
+.input {
   padding: 0 10px;
   display: block;
   width: 620px;
@@ -11,18 +11,18 @@
   transition: 0.3s ease-in-out;
 }
 
-.recipes__input:hover,
-.recipes__input:focus {
+.input:hover,
+.input:focus {
   border-color: #c9a131;
   transition: 0.3s ease-in-out;
 }
 
-.recipes__input::placeholder {
+.input::placeholder {
   color: #171718;
 }
 
 @media (max-width: 1300px) {
-  .recipes__input {
+  .input {
     width: 300px;
   }
 }

@@ -1,50 +1,95 @@
-.container {
-  margin: 0 auto;
-  width: 1260px;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  /* min-height: 568px; */
-  background-image: url(../../assets/img/backdrop-02.jpg);
+  min-height: 568px;
+  background-image: url(../../assets/img/backdrops/backdrop-02.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* background-color: wheat; */
 }
 
 .main {
   position: relative;
   flex: 1 0 auto;
+}
 
-  background-image: url(../../assets/page-01.png);
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+}
+
+.about__title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  font-weight: 600;
+  color: #e3f6fa;
+  text-align: center;
+}
+
+.about__title::before,
+.about__title::after {
+  margin: 0 auto;
+  display: block;
+  content: '';
+  width: 247px;
+  height: 24px;
+  background-image: url(../../assets/img/decoration/decoration.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+}
+
+.about__title::before {
+  margin-bottom: 10px;
+}
+
+.about__title::after {
+  margin-top: 10px;
+  transform: rotate(180deg);
 }
 
 @media (max-width: 1300px) {
-  .container {
-    width: 940px;
+  .about {
+    width: 300px;
+  }
+
+  .about__title {
+    font-size: 28px;
+  }
+
+  .about__title::before {
+    margin-bottom: 6px;
+  }
+
+  .about__title::after {
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    width: 270px;
+  }
+
+  .about__title {
+    font-size: 24px;
   }
 }
 
 @media (max-width: 980px) {
-  .container {
-    width: 620px;
+  .about {
+    width: 230px;
   }
-}
 
-@media (max-width: 660px) {
-  .container {
-    width: 300px;
+  .about__title {
+    font-size: 18px;
+  }
+
+  .about__title::before,
+  .about__title::after {
+    width: 230px;
   }
 }
-/*
-@media (max-width: 300px) {
-  .wrapper {
-    overflow-x: scroll;
-  }
-} */

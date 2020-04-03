@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import s from './Legend.module.css';
 
 const Legend = ({ items }) => (
-  <ul className={s.recipes__list}>
+  <ul className={s.list}>
     {items.map(item => (
-      <li key={item.level} className={s.recipes__item}>
+      <li key={item.level} className={s.item}>
         <i
           className="material-icons"
           style={{ color: item.color, paddingRight: '6px' }}

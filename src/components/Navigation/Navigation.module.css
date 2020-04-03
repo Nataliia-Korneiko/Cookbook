@@ -15,7 +15,7 @@
   display: block;
   width: 44px;
   background-color: #000000;
-  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
 }
 
 .navigation__list {
@@ -27,14 +27,13 @@
 .navigation__link {
   position: relative;
   display: block;
-  /* color: #ffffff; */
   color: #c9a131;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 28px;
   font-weight: 600;
   text-transform: uppercase;
-  transition: color 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   text-shadow: -0 -1px 2px #000000, 0 -1px 2px #000000, -0 1px 2px #000000,
     0 1px 2px #000000, -1px -0 2px #000000, 1px -0 2px #000000,
     -1px 0 2px #000000, 1px 0 2px #000000, -1px -1px 2px #000000,
@@ -45,9 +44,8 @@
 
 .navigation__link:hover,
 .navigation__link:focus {
-  /* color: #c9a131; */
   color: #ffffff;
-  transition: color 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .navigation__link::after {
@@ -59,15 +57,13 @@
   content: '';
   width: 100%;
   height: 3px;
-  /* background-color: #c9a131; */
   background-color: #ffffff;
-  /* transition: display 0.3s ease-in-out; */
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
 }
 
 .navigation__link:hover::after,
 .navigation__link:focus::after {
   display: block;
-  /* transition: display 0.3s ease-in-out; */
 }
 
 .navigation__button {
@@ -81,16 +77,14 @@
 }
 
 .navigation__button path {
-  /* fill: #ffffff; */
   fill: #c9a131;
-  transition: fill 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .navigation__button:hover path,
 .navigation__button:focus path {
-  /* fill: #c9a131; */
   fill: #ffffff;
-  transition: fill 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 1300px) {

@@ -1,17 +1,13 @@
 .button {
-  /* margin-bottom: 30px; */
-  display: block;
-  width: 300px;
+  width: 120px;
   height: 44px;
-  border: none;
+  border: 2px solid #c9a131;
   border-radius: 5px;
-  /* background-color: rgb(255, 255, 255, 0.25); */
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  /* color: #ffffff; */
-  color: #000000;
+  color: #171718;
   text-align: center;
   text-transform: uppercase;
   outline: none;
@@ -23,10 +19,4 @@
 .button:focus {
   background-color: #c9a131;
   transition: 0.8s ease-in-out;
-}
-
-@media (max-width: 660px) {
-  .button {
-    margin-bottom: 30px;
-  }
 }

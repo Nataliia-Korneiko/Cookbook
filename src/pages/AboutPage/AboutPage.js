@@ -7,8 +7,15 @@ const AboutPage = () => {
   return (
     <div className={s.wrapper}>
       <Header />
-      <main className={`${s.main} ${s.container}`} />
-      {/* <img src={paper} alt="zero" className={s.zero} width="700" /> */}
+      <main className={s.main}>
+        <div className={s.about}>
+          <p className={s.about__title}>
+            Cookbook is your personal recipe organizer. Save your favorite
+            recipes in one place, accessible on all your devices and anytime.
+            You can also delete or edit previously created recipes.
+          </p>
+        </div>
+      </main>
       <Footer />
     </div>
   );

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import LevelSelector from '../LevelSelector/LevelSelector';
 import Level from '../../utils/Level';
+import Button from '../ButtonEditor/ButtonEditor';
 import s from './RecipeEditor.module.css';
 
 const options = Object.values(Level);
@@ -59,10 +60,10 @@ export default class RecipeEditor extends Component {
     const { onCancel } = this.props;
 
     return (
-      <form className={s.recipes__form} onSubmit={this.handleSubmit}>
-        <label className={`${s.recipes__label} ${s.recipes__labelText}`}>
+      <form className={s.form} onSubmit={this.handleSubmit}>
+        <label className={s.label}>
           <input
-            className={s.recipes__input}
+            className={s.input}
             type="text"
             name="text"
             value={text}
@@ -71,9 +72,9 @@ export default class RecipeEditor extends Component {
           />
         </label>
 
-        <label className={`${s.recipes__label} ${s.recipes__labelDescription}`}>
+        <label className={`${s.label} ${s.label__description}`}>
           <textarea
-            className={s.recipes__textarea}
+            className={s.textarea}
             name="description"
             value={description}
             onChange={this.handleChange}
@@ -81,7 +82,7 @@ export default class RecipeEditor extends Component {
           />
         </label>
 
-        <label className={`${s.recipes__label} ${s.recipes__labelLevel}`}>
+        <label className={`${s.label} ${s.label__level}`}>
           Select the recipe difficulty level:
           <LevelSelector
             options={options}
@@ -90,17 +91,9 @@ export default class RecipeEditor extends Component {
           />
         </label>
 
-        <div className={s.recipes__buttons}>
-          <button className={s.recipes__button} type="submit">
-            Save
-          </button>
-          <button
-            className={s.recipes__button}
-            type="button"
-            onClick={onCancel}
-          >
-            Cancel
-          </button>
+        <div className={s.buttons}>
+          <Button label="Save" type="submit" />
+          <Button label="Cancel" type="button" onClick={onCancel} />
         </div>
       </form>
     );

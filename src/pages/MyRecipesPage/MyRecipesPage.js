@@ -8,7 +8,7 @@ import Legend from '../../components/Legend/Legend';
 import Level from '../../utils/Level';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import Button from '../../components/Button/Button';
+import Button from '../../components/ButtonAdd/ButtonAdd';
 import s from './MyRecipesPage.module.css';
 
 const moment = require('moment');
@@ -148,23 +148,14 @@ export default class MyRecipesPage extends Component {
       <div className={s.wrapper}>
         <Header />
         <main className={`${s.main} ${s.container}`}>
-          {/* <button
-            className={s.recipes__button}
-            type="button"
-            onClick={this.openCreateModal}
-          >
-            Add recipe
-          </button> */}
           <div className={s.control}>
             <Button
               label="Add recipe"
               type="button"
               onClick={this.openCreateModal}
             />
-            {/* <div className={s.control__wrapper}> */}
             <RecipeFilter value={filter} onChangeFilter={this.changeFilter} />
             <Legend items={legendOptions} />
-            {/* </div> */}
           </div>
           <RecipeList
             items={filteredRecipes}

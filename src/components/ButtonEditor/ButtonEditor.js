@@ -1,9 +1,9 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './Button.module.css';
+import s from './ButtonEditor.module.css';
 
-const Button = ({ type = 'button', label = '', onClick = () => null }) => {
+const Button = ({ type, label, onClick }) => {
   return (
     <button className={s.button} type={type} onClick={onClick}>
       {label}
@@ -14,7 +14,11 @@ const Button = ({ type = 'button', label = '', onClick = () => null }) => {
 Button.propTypes = {
   type: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  onClick: () => null,
 };
 
 export default Button;

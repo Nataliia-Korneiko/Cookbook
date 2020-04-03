@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { shallow } from 'enzyme';
-import Recipe from '../Recipe';
+import RecipeItem from '../RecipeItem';
 
 describe('Recipe component', () => {
   const props = {
@@ -14,7 +14,7 @@ describe('Recipe component', () => {
     onEdit: () => null,
   };
 
-  const newRecipe = shallow(<Recipe {...props} />);
+  const newRecipe = shallow(<RecipeItem {...props} />);
 
   it('renders a properly', () => {
     expect(newRecipe).toMatchSnapshot();

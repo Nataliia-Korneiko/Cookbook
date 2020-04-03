@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import routes from '../../routes/routes';
-import logo from '../../assets/img/logo.png';
-import { ReactComponent as Burger } from '../../assets/icon/icon-burger.svg';
+import logo from '../../assets/img/logo/logo.png';
+import { ReactComponent as Burger } from '../../assets/img/icons/icon-burger.svg';
 import s from './Navigation.module.css';
 
 const Navigation = () => {

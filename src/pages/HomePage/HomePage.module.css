@@ -8,7 +8,7 @@
   flex-direction: column;
   height: 100vh;
   min-height: 568px;
-  background-image: url(../../assets/img/backdrop-01.jpg);
+  background-image: url(../../assets/img/backdrops/backdrop-01.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -19,7 +19,7 @@
   flex: 1 0 auto;
 }
 
-.main__quote {
+.quote {
   margin: 0 auto;
   padding: 15px;
   position: absolute;
@@ -33,12 +33,12 @@
   font-family: 'Dancing Script', cursive;
   font-size: 48px;
   font-weight: 600;
-  animation: main__quote 3s forwards;
+  animation: quote 3s forwards;
   animation-delay: 1s;
   opacity: 0;
 }
 
-@keyframes main__quote {
+@keyframes quote {
   0% {
     opacity: 0;
   }
@@ -47,25 +47,25 @@
   }
 }
 
-.main__description {
+.quote__description {
   margin-bottom: 10px;
   color: #ffffff;
   text-align: center;
 }
 
-.main__author {
+.quote__author {
   color: #c9a131;
   text-align: end;
 }
 
-.main__author::after {
+.quote__author::after {
   margin-right: 16px;
   margin-left: auto;
   display: block;
   content: '';
   width: 247px;
   height: 24px;
-  background-image: url(../../assets/icon/decoration-01.png);
+  background-image: url(../../assets/img/decoration/decoration.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -81,7 +81,7 @@
     width: 620px;
   }
 
-  .main__quote {
+  .quote {
     font-size: 42px;
   }
 }
@@ -91,16 +91,16 @@
     width: 300px;
   }
 
-  .main__quote {
+  .quote {
     width: 300px;
     font-size: 28px;
   }
 
-  .main__author {
+  .quote__author {
     text-align: center;
   }
 
-  .main__author::after {
+  .quote__author::after {
     margin: 0;
   }
 }

@@ -1,4 +1,4 @@
-.recipes__form {
+.form {
   padding: 30px 0;
   position: relative;
   display: flex;
@@ -7,7 +7,7 @@
   width: 620px;
 }
 
-.recipes__form::after {
+.form::after {
   position: absolute;
   display: block;
   right: 0;
@@ -16,18 +16,18 @@
   content: '';
   width: 161.1px;
   height: 216px;
-  background-image: url(../../assets/icon/chef-01.png);
+  background-image: url(../../assets/img/decoration/chef.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-.recipes__label {
+.label {
   margin-bottom: 20px;
   width: 500px;
 }
 
-.recipes__input {
+.input {
   padding: 0 10px;
   display: block;
   width: 100%;
@@ -39,7 +39,7 @@
   outline: none;
 }
 
-.recipes__textarea {
+.textarea {
   padding: 0 10px;
   display: block;
   width: 100%;
@@ -52,7 +52,7 @@
   resize: none;
 }
 
-.recipes__labelLevel {
+.label__level {
   font-family: 'Dancing Script', cursive;
   font-size: 22px;
   font-weight: 700;
@@ -60,7 +60,7 @@
   align-items: center;
 }
 
-.recipes__labelLevel select {
+.label__level select {
   margin-left: 20px;
   height: 34px;
   width: 106px;
@@ -70,7 +70,7 @@
   outline: none;
 }
 
-.recipes__buttons {
+.buttons {
   padding-left: 50px;
   display: flex;
   justify-content: space-between;
@@ -78,65 +78,38 @@
   align-self: baseline;
 }
 
-.recipes__button {
-  width: 180px;
-  height: 44px;
-  border: 2px solid #c9a131;
-  border-radius: 5px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  color: #171718;
-  background-color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-  outline: none;
-  cursor: pointer;
-  transition: 0.8s ease-in-out;
-}
-
-.recipes__button:hover,
-.recipes__button:focus {
-  background-color: #c9a131;
-  transition: 0.8s ease-in-out;
-}
-
 @media (max-width: 660px) {
-  .recipes__form {
+  .form {
     width: 300px;
   }
 
-  .recipes__form::after {
+  .form::after {
     bottom: 94px;
   }
 
-  .recipes__label {
+  .label {
     width: 270px;
   }
 
-  .recipes__labelDescription {
+  .label__description {
     margin-bottom: 30px;
   }
 
-  .recipes__labelLevel {
+  .label__level {
     padding-right: 12px;
     font-size: 28px;
   }
 
-  .recipes__labelLevel select {
+  .label__level select {
     margin-top: 40px;
     margin-left: 0;
     width: 120px;
     height: 44px;
   }
 
-  .recipes__buttons {
+  .buttons {
     padding-left: 0;
     width: 270px;
     align-self: center;
-  }
-
-  .recipes__button {
-    width: 120px;
   }
 }

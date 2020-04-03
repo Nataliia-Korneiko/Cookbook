@@ -1,0 +1,28 @@
+.button {
+  width: 180px;
+  height: 44px;
+  border: 2px solid #c9a131;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #171718;
+  background-color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  transition: 0.8s ease-in-out;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #c9a131;
+  transition: 0.8s ease-in-out;
+}
+
+@media (max-width: 660px) {
+  .button {
+    width: 120px;
+  }
+}
