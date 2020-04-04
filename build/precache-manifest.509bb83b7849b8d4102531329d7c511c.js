@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c640971385ef09d4e047a5284c58503e",
+    "revision": "4e5e4847675669d2e36ca4f6ee2a6891",
     "url": "/cookbook/index.html"
   },
   {
-    "revision": "9cfab03e5452203746b8",
-    "url": "/cookbook/static/css/main.237123d3.chunk.css"
+    "revision": "7b7310e196a3036dcfbe",
+    "url": "/cookbook/static/css/main.40e56ffc.chunk.css"
   },
   {
-    "revision": "cb9258dae038291688ee",
-    "url": "/cookbook/static/js/2.0594b3f1.chunk.js"
+    "revision": "2cdc842082e5f58532cc",
+    "url": "/cookbook/static/js/2.c72853f3.chunk.js"
   },
   {
     "revision": "6d6c0d1371e570614ef23e12cbfed171",
-    "url": "/cookbook/static/js/2.0594b3f1.chunk.js.LICENSE.txt"
+    "url": "/cookbook/static/js/2.c72853f3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9cfab03e5452203746b8",
-    "url": "/cookbook/static/js/main.4d99420d.chunk.js"
+    "revision": "7b7310e196a3036dcfbe",
+    "url": "/cookbook/static/js/main.414b87d1.chunk.js"
   },
   {
     "revision": "00bbaa9f9de6059476b9",
@@ -28,16 +28,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cookbook/static/media/backdrop-01.a3fa4278.jpg"
   },
   {
+    "revision": "0d6101d39a5384198cca9abf09790d69",
+    "url": "/cookbook/static/media/backdrop-02.0d6101d3.jpg"
+  },
+  {
     "revision": "bd78375e29f70750d4ac201e9721aba1",
-    "url": "/cookbook/static/media/backdrop-02.bd78375e.jpg"
+    "url": "/cookbook/static/media/backdrop-03.bd78375e.jpg"
   },
   {
     "revision": "8481dad297c352715e1f320af1183006",
-    "url": "/cookbook/static/media/backdrop-03.8481dad2.png"
+    "url": "/cookbook/static/media/backdrop-04.8481dad2.png"
+  },
+  {
+    "revision": "a8455906b1f5470c0aa9ff70db83c0ec",
+    "url": "/cookbook/static/media/backdrop-06.a8455906.jpg"
+  },
+  {
+    "revision": "885baa6a9774b243a8da9fa464e64c07",
+    "url": "/cookbook/static/media/backdrop-10.885baa6a.jpg"
   },
   {
     "revision": "d543f4ce2f65dfcf64b541e95e28432a",
-    "url": "/cookbook/static/media/chef-01.d543f4ce.png"
+    "url": "/cookbook/static/media/chef.d543f4ce.png"
   },
   {
     "revision": "112efea77224aaee6ab8ce9982d1440b",
@@ -57,11 +69,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "a6696f391f87d2803e697dd57f7a9777",
-    "url": "/cookbook/static/media/dish-01.a6696f39.png"
+    "url": "/cookbook/static/media/dish.a6696f39.png"
   },
   {
-    "revision": "ae6efdf9285777770593d1ec6e14c297",
-    "url": "/cookbook/static/media/icon-burger.ae6efdf9.svg"
+    "revision": "5b408f7e7533630185af8a1bcdcaaeb7",
+    "url": "/cookbook/static/media/icon-burger.5b408f7e.svg"
   },
   {
     "revision": "3a20da0d3b295dde292d4ae325ff57c7",
@@ -90,9 +102,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bc3aa95dca08f5fee5291e34959c27bc",
     "url": "/cookbook/static/media/montserrat-v14-latin-regular.bc3aa95d.woff2"
-  },
-  {
-    "revision": "af320097d3dc848f637ffa327f74c45a",
-    "url": "/cookbook/static/media/page-01.af320097.png"
   }
 ]);

@@ -6,10 +6,10 @@
   height: 44px;
   border: none;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--bg-color-white);
   font-size: 18px;
   font-weight: 400;
-  color: #171718;
+  color: var(--color-dark-blue);
 }
 
 .item {

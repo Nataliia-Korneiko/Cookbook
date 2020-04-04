@@ -14,8 +14,8 @@
 .logo__link {
   display: block;
   width: 44px;
-  background-color: #000000;
-  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+  background-color: var(--bg-color-black);
+  box-shadow: var(--box-shadow);
 }
 
 .navigation__list {
@@ -27,24 +27,19 @@
 .navigation__link {
   position: relative;
   display: block;
-  color: #c9a131;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 28px;
   font-weight: 600;
+  color: var(--color-golden);
   text-transform: uppercase;
+  text-shadow: var(--text-shadow);
   transition: 0.3s ease-in-out;
-  text-shadow: -0 -1px 2px #000000, 0 -1px 2px #000000, -0 1px 2px #000000,
-    0 1px 2px #000000, -1px -0 2px #000000, 1px -0 2px #000000,
-    -1px 0 2px #000000, 1px 0 2px #000000, -1px -1px 2px #000000,
-    1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000,
-    -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000,
-    1px 1px 2px #000000;
 }
 
 .navigation__link:hover,
 .navigation__link:focus {
-  color: #ffffff;
+  color: var(--color-white);
   transition: 0.3s ease-in-out;
 }
 
@@ -57,8 +52,8 @@
   content: '';
   width: 100%;
   height: 3px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+  background-color: var(--bg-color-white);
+  box-shadow: var(--box-shadow);
 }
 
 .navigation__link:hover::after,
@@ -66,7 +61,17 @@
   display: block;
 }
 
-.navigation__button {
+.burger {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+/* .navigation__button {
   display: none;
   width: 40px;
   height: 40px;
@@ -74,18 +79,18 @@
   outline: none;
   border: none;
   cursor: pointer;
-}
+} */
 
-.navigation__button path {
-  fill: #c9a131;
+/* .navigation__button path {
+  fill: var(--color-golden);
   transition: 0.3s ease-in-out;
-}
+} */
 
-.navigation__button:hover path,
+/* .navigation__button:hover path,
 .navigation__button:focus path {
-  fill: #ffffff;
+  fill: var(--color-white);
   transition: 0.3s ease-in-out;
-}
+} */
 
 @media (max-width: 1300px) {
   .container {
@@ -102,9 +107,13 @@
     display: none;
   }
 
-  .navigation__button {
+  .burger {
     display: block;
   }
+
+  /* .navigation__button {
+    display: block;
+  } */
 }
 
 @media (max-width: 660px) {

@@ -32,10 +32,10 @@
   display: block;
   width: 100%;
   height: 44px;
-  border: 2px solid #c9a131;
+  border: 2px solid var(--color-golden);
   border-radius: 5px;
   font-size: 18px;
-  color: #171718;
+  color: var(--color-dark-blue);
   outline: none;
 }
 
@@ -44,10 +44,10 @@
   display: block;
   width: 100%;
   height: 200px;
-  border: 2px solid #c9a131;
+  border: 2px solid var(--color-golden);
   border-radius: 5px;
   font-size: 18px;
-  color: #171718;
+  color: var(--color-dark-blue);
   outline: none;
   resize: none;
 }
@@ -56,7 +56,7 @@
   font-family: 'Dancing Script', cursive;
   font-size: 22px;
   font-weight: 700;
-  color: #c9a131;
+  color: var(--color-golden);
   align-items: center;
 }
 
@@ -65,8 +65,9 @@
   height: 34px;
   width: 106px;
   border: transparent;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  background-color: #c9a131;
+  background-color: var(--bg-color-golden);
   outline: none;
 }
 

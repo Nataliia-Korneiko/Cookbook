@@ -6,7 +6,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--bg-color-backdrop);
   align-items: center;
   z-index: 10;
 }
@@ -14,7 +14,7 @@
 .modal {
   border: none;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: var(--bg-color-white);
   background-image: url(../../assets/img/backdrops/backdrop-04.png);
   background-repeat: no-repeat;
   background-position: center;

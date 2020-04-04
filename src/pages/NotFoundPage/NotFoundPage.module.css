@@ -1,6 +1,6 @@
 .wrapper {
   height: 100vh;
-  background-color: #c9a131;
+  background-color: var(--bg-color-golden);
 }
 
 .main {
@@ -27,21 +27,16 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-white);
   text-transform: uppercase;
-  text-shadow: 0 -1px 2px #000000, 0 -1px 2px #000000, 0 1px 2px #000000,
-    0 1px 2px #000000, -1px 0 2px #000000, 1px 0 2px #000000, -1px 0 2px #000000,
-    1px 0 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000,
-    -1px 1px 2px #000000, 1px 1px 2px #000000, -1px -1px 2px #000000,
-    1px -1px 2px #000000, -1px 1px 2px #000000, 1px 1px 2px #000000;
-  transition: color 0.3s ease-in-out;
+  text-shadow: var(--text-shadow);
+  transition: 0.3s ease-in-out;
 }
 
 .error__subtitle a:hover,
 .error__subtitle a:focus {
-  color: #c9a131;
-  /* color: #ffffff; */
-  transition: color 0.3s ease-in-out;
+  color: var(--color-golden);
+  transition: 0.3s ease-in-out;
 }
 
 .error {
@@ -55,7 +50,7 @@
   font-size: 300px;
   line-height: 1;
   font-weight: 700;
-  color: #000000;
+  color: var(--color-black);
 }
 
 .error__dish {

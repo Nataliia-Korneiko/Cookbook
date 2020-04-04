@@ -1,13 +1,13 @@
 .button {
   width: 120px;
   height: 44px;
-  border: 2px solid #c9a131;
+  border: 2px solid var(--color-golden);
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: var(--bg-color-white);
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: #171718;
+  color: var(--color-dark-blue);
   text-align: center;
   text-transform: uppercase;
   outline: none;
@@ -17,6 +17,6 @@
 
 .button:hover,
 .button:focus {
-  background-color: #c9a131;
+  background-color: var(--bg-color-golden);
   transition: 0.8s ease-in-out;
 }
