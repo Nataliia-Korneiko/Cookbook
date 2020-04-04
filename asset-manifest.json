@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/cookbook/static/css/main.40e56ffc.chunk.css",
-    "main.js": "/cookbook/static/js/main.414b87d1.chunk.js",
-    "main.js.map": "/cookbook/static/js/main.414b87d1.chunk.js.map",
+    "main.css": "/cookbook/static/css/main.f8be73af.chunk.css",
+    "main.js": "/cookbook/static/js/main.430d3157.chunk.js",
+    "main.js.map": "/cookbook/static/js/main.430d3157.chunk.js.map",
     "runtime-main.js": "/cookbook/static/js/runtime-main.51ed3048.js",
     "runtime-main.js.map": "/cookbook/static/js/runtime-main.51ed3048.js.map",
-    "static/js/2.c72853f3.chunk.js": "/cookbook/static/js/2.c72853f3.chunk.js",
-    "static/js/2.c72853f3.chunk.js.map": "/cookbook/static/js/2.c72853f3.chunk.js.map",
+    "static/js/2.cc0cdc0c.chunk.js": "/cookbook/static/js/2.cc0cdc0c.chunk.js",
+    "static/js/2.cc0cdc0c.chunk.js.map": "/cookbook/static/js/2.cc0cdc0c.chunk.js.map",
     "index.html": "/cookbook/index.html",
-    "precache-manifest.509bb83b7849b8d4102531329d7c511c.js": "/cookbook/precache-manifest.509bb83b7849b8d4102531329d7c511c.js",
+    "precache-manifest.9b5a3407ee2c3d802963ee1bd12a528b.js": "/cookbook/precache-manifest.9b5a3407ee2c3d802963ee1bd12a528b.js",
     "service-worker.js": "/cookbook/service-worker.js",
-    "static/css/main.40e56ffc.chunk.css.map": "/cookbook/static/css/main.40e56ffc.chunk.css.map",
-    "static/js/2.c72853f3.chunk.js.LICENSE.txt": "/cookbook/static/js/2.c72853f3.chunk.js.LICENSE.txt",
+    "static/css/main.f8be73af.chunk.css.map": "/cookbook/static/css/main.f8be73af.chunk.css.map",
+    "static/js/2.cc0cdc0c.chunk.js.LICENSE.txt": "/cookbook/static/js/2.cc0cdc0c.chunk.js.LICENSE.txt",
     "static/media/HomePage.module.css": "/cookbook/static/media/backdrop-01.a3fa4278.jpg",
     "static/media/AboutPage.module.css": "/cookbook/static/media/backdrop-02.0d6101d3.jpg",
     "static/media/MyRecipesPage.module.css": "/cookbook/static/media/backdrop-03.bd78375e.jpg",
@@ -19,15 +19,15 @@
     "static/media/LogInPage.module.css": "/cookbook/static/media/backdrop-06.a8455906.jpg",
     "static/media/SignUpPage.module.css": "/cookbook/static/media/backdrop-10.885baa6a.jpg",
     "static/media/RecipeEditor.module.css": "/cookbook/static/media/chef.d543f4ce.png",
-    "static/media/index.css": "/cookbook/static/media/montserrat-v14-latin-regular.bc3aa95d.woff2",
+    "static/media/main.css": "/cookbook/static/media/montserrat-v14-latin-regular.bc3aa95d.woff2",
     "static/media/dish.png": "/cookbook/static/media/dish.a6696f39.png",
-    "static/media/icon-burger.5b408f7e.svg": "/cookbook/static/media/icon-burger.5b408f7e.svg",
-    "static/media/logo.png": "/cookbook/static/media/logo.3a20da0d.png"
+    "static/media/logo.png": "/cookbook/static/media/logo.3a20da0d.png",
+    "static/media/BurgerMenu.module.css": "/cookbook/static/media/scroll.ac56acb6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.51ed3048.js",
-    "static/js/2.c72853f3.chunk.js",
-    "static/css/main.40e56ffc.chunk.css",
-    "static/js/main.414b87d1.chunk.js"
+    "static/js/2.cc0cdc0c.chunk.js",
+    "static/css/main.f8be73af.chunk.css",
+    "static/js/main.430d3157.chunk.js"
   ]
 }
