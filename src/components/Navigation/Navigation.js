@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import routes from '../../routes/routes';
 import logo from '../../assets/img/logo/logo.png';
-// import { ReactComponent as Burger } from '../../assets/img/icons/icon-burger.svg';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import s from './Navigation.module.css';
 
@@ -41,9 +40,6 @@ const Navigation = () => {
             </NavLink>
           </li>
         </ul>
-        {/* <button type="button" className={s.navigation__button}>
-          <Burger />
-        </button> */}
         <div className={s.burger}>
           <BurgerMenu />
         </div>

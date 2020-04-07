@@ -71,27 +71,6 @@
   z-index: 1;
 }
 
-/* .navigation__button {
-  display: none;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  cursor: pointer;
-} */
-
-/* .navigation__button path {
-  fill: var(--color-golden);
-  transition: 0.3s ease-in-out;
-} */
-
-/* .navigation__button:hover path,
-.navigation__button:focus path {
-  fill: var(--color-white);
-  transition: 0.3s ease-in-out;
-} */
-
 @media (max-width: 1300px) {
   .container {
     width: 940px;
@@ -110,10 +89,6 @@
   .burger {
     display: block;
   }
-
-  /* .navigation__button {
-    display: block;
-  } */
 }
 
 @media (max-width: 660px) {

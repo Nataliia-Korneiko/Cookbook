@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  min-height: 568px;
   background-image: url(../../assets/img/backdrops/backdrop-02.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -19,12 +18,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 320px;
+  width: 400px;
 }
 
 .about__title {
   font-family: 'Dancing Script', cursive;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 600;
   color: var(--color-silver);
   text-align: center;
@@ -53,11 +52,11 @@
 
 @media (max-width: 1300px) {
   .about {
-    width: 300px;
+    width: 386px;
   }
 
   .about__title {
-    font-size: 28px;
+    font-size: 34px;
   }
 
   .about__title::before {
@@ -71,15 +70,62 @@
 
 @media (max-width: 1200px) {
   .about {
-    width: 270px;
+    width: 300px;
   }
 
   .about__title {
-    font-size: 24px;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 980px) {
+  .about {
+    width: 260px;
+  }
+
+  .about__title {
+    font-size: 22px;
+  }
+
+  .about__title::before,
+  .about__title::after {
+    width: 260px;
+  }
+}
+
+@media (max-width: 980px) and (orientation: landscape) {
+  .about {
+    width: 180px;
+  }
+
+  .about__title {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .about__title::before,
+  .about__title::after {
+    margin: 0;
+    width: 180px;
+  }
+}
+
+@media (max-width: 660px) and (orientation: landscape) {
+  .about {
+    width: 170px;
+  }
+
+  .about__title {
+    font-size: 15px;
+  }
+
+  .about__title::before,
+  .about__title::after {
+    width: 170px;
+  }
+}
+
+@media (max-width: 320px) {
   .about {
     width: 230px;
   }
@@ -90,6 +136,13 @@
 
   .about__title::before,
   .about__title::after {
+    margin: 0;
     width: 230px;
+  }
+}
+
+@media (max-width: 300px) {
+  .wrapper {
+    overflow-x: scroll;
   }
 }
