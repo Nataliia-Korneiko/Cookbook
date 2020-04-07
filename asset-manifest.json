@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/cookbook/static/css/main.f8be73af.chunk.css",
-    "main.js": "/cookbook/static/js/main.430d3157.chunk.js",
-    "main.js.map": "/cookbook/static/js/main.430d3157.chunk.js.map",
+    "main.css": "/cookbook/static/css/main.786d8852.chunk.css",
+    "main.js": "/cookbook/static/js/main.acf4f223.chunk.js",
+    "main.js.map": "/cookbook/static/js/main.acf4f223.chunk.js.map",
     "runtime-main.js": "/cookbook/static/js/runtime-main.51ed3048.js",
     "runtime-main.js.map": "/cookbook/static/js/runtime-main.51ed3048.js.map",
-    "static/js/2.cc0cdc0c.chunk.js": "/cookbook/static/js/2.cc0cdc0c.chunk.js",
-    "static/js/2.cc0cdc0c.chunk.js.map": "/cookbook/static/js/2.cc0cdc0c.chunk.js.map",
+    "static/js/2.116c4190.chunk.js": "/cookbook/static/js/2.116c4190.chunk.js",
+    "static/js/2.116c4190.chunk.js.map": "/cookbook/static/js/2.116c4190.chunk.js.map",
     "index.html": "/cookbook/index.html",
-    "precache-manifest.9b5a3407ee2c3d802963ee1bd12a528b.js": "/cookbook/precache-manifest.9b5a3407ee2c3d802963ee1bd12a528b.js",
+    "precache-manifest.d52f862a2a3e4ffeaac3a42b8011c554.js": "/cookbook/precache-manifest.d52f862a2a3e4ffeaac3a42b8011c554.js",
     "service-worker.js": "/cookbook/service-worker.js",
-    "static/css/main.f8be73af.chunk.css.map": "/cookbook/static/css/main.f8be73af.chunk.css.map",
-    "static/js/2.cc0cdc0c.chunk.js.LICENSE.txt": "/cookbook/static/js/2.cc0cdc0c.chunk.js.LICENSE.txt",
+    "static/css/main.786d8852.chunk.css.map": "/cookbook/static/css/main.786d8852.chunk.css.map",
+    "static/js/2.116c4190.chunk.js.LICENSE.txt": "/cookbook/static/js/2.116c4190.chunk.js.LICENSE.txt",
     "static/media/HomePage.module.css": "/cookbook/static/media/backdrop-01.a3fa4278.jpg",
     "static/media/AboutPage.module.css": "/cookbook/static/media/backdrop-02.0d6101d3.jpg",
     "static/media/MyRecipesPage.module.css": "/cookbook/static/media/backdrop-03.bd78375e.jpg",
@@ -26,8 +26,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.51ed3048.js",
-    "static/js/2.cc0cdc0c.chunk.js",
-    "static/css/main.f8be73af.chunk.css",
-    "static/js/main.430d3157.chunk.js"
+    "static/js/2.116c4190.chunk.js",
+    "static/css/main.786d8852.chunk.css",
+    "static/js/main.acf4f223.chunk.js"
   ]
 }
