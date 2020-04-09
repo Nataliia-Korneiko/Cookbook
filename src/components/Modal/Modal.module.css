@@ -1,6 +1,6 @@
 .backdrop {
   display: flex;
-  position: fixed;
+  position: absolute;
   justify-content: center;
   top: 0;
   left: 0;
@@ -14,8 +14,7 @@
 .modal {
   border: none;
   border-radius: 8px;
-  background-color: var(--bg-color-white);
-  background-image: url(../../assets/img/backdrops/backdrop-04.png);
+  background-image: url(../../assets/img/backdrops/backdrop-06.png);
   background-repeat: no-repeat;
   background-position: center;
 }

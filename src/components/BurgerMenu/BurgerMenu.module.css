@@ -9,17 +9,17 @@
   z-index: 2;
 }
 
-.toggle:checked .hamburger__icon {
+.toggle:checked + .hamburger > div {
   transform: rotate(135deg);
 }
 
-.toggle:checked .hamburger__icon::before,
-.toggle:checked .hamburger__icon::after {
+.toggle:checked + .hamburger > div::before,
+.toggle:checked + .hamburger > div::after {
   top: 0;
   transform: rotate(90deg);
 }
 
-.toggle:checked:hover .hamburger__icon {
+.toggle:checked:hover + .hamburger > div {
   transform: rotate(225deg);
 }
 
@@ -47,7 +47,7 @@
   z-index: 1;
 }
 
-.hamburger__icon {
+.hamburger > div {
   position: relative;
   display: flex;
   flex: none;
@@ -59,8 +59,8 @@
   transition: 0.4s ease-in-out;
 }
 
-.hamburger__icon::before,
-.hamburger__icon::after {
+.hamburger > div::before,
+.hamburger > div::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -69,11 +69,11 @@
   z-index: 1;
 }
 
-.hamburger__icon::before {
+.hamburger > div::before {
   top: -10px;
 }
 
-.hamburger__icon::after {
+.hamburger > div::after {
   top: 10px;
 }
 
@@ -95,8 +95,8 @@
   flex: none;
   justify-content: center;
   align-items: center;
-  width: 200vw;
-  height: 200vw;
+  width: 300vw;
+  height: 300vw;
   border-radius: 50%;
   background-color: var(--bg-color-golden);
   transform: scale(0);
@@ -107,7 +107,7 @@
   position: relative;
   width: 600px;
   height: 600px;
-  background-image: url(../../assets/scroll.png);
+  background-image: url(../../assets/img/decoration/scroll.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

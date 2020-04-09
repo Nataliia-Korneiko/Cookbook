@@ -9,7 +9,7 @@ const BurgerMenu = () => {
     <div>
       <input type="checkbox" className={s.toggle} />
       <div className={s.hamburger}>
-        <div className={s.hamburger__icon} />
+        <div />
       </div>
       <div className={s.menu}>
         <div>

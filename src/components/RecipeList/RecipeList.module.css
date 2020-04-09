@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  height: 427px;
+  height: calc(100vh - 230px);
   overflow-y: scroll;
 }
 
@@ -43,6 +43,10 @@
 }
 
 @media (max-width: 660px) {
+  .list {
+    height: calc(100vh - 246px);
+  }
+
   .item:not(:nth-child(2n)) {
     margin-right: 0;
   }

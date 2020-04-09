@@ -4,7 +4,7 @@
   border-radius: 5px;
   width: 300px;
   background-color: var(--color-white);
-  background-image: url(../../assets/img/backdrops/backdrop-04.png);
+  background-image: url(../../assets/img/backdrops/backdrop-06.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -74,4 +74,10 @@
 .buttons {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-height: 640px) {
+  .wrapper {
+    height: 192px;
+  }
 }

@@ -68,7 +68,7 @@ export default class RecipeEditor extends Component {
             name="text"
             value={text}
             onChange={this.handleChange}
-            placeholder="Enter the name of the recipe"
+            placeholder="Title..."
           />
         </label>
 
@@ -78,7 +78,7 @@ export default class RecipeEditor extends Component {
             name="description"
             value={description}
             onChange={this.handleChange}
-            placeholder="Enter the description for your recipe"
+            placeholder="Description..."
           />
         </label>
 

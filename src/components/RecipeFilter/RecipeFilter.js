@@ -8,7 +8,7 @@ const RecipeFilter = ({ value, onChangeFilter }) => (
     type="text"
     value={value}
     onChange={onChangeFilter}
-    placeholder="Enter text to filter the recipe"
+    placeholder="Enter text"
   />
 );
 

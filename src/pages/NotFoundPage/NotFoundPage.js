@@ -12,7 +12,10 @@ const NotFoundPage = () => {
           Sorry, the page you requested was not found.
         </h2>
         <p className={s.error__subtitle}>
-          This is our homepage: <NavLink to={routes.HOME}>Home</NavLink>
+          This is our homepage:{' '}
+          <NavLink to={routes.HOME} className={s.error__link}>
+            Home
+          </NavLink>
         </p>
         <div className={s.error}>
           <p className={s.error__number}>4</p>

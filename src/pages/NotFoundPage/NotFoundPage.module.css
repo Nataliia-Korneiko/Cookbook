@@ -23,7 +23,7 @@
   font-size: 50px;
 }
 
-.error__subtitle a {
+.error__link {
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   font-weight: 700;
@@ -33,13 +33,14 @@
   transition: 0.3s ease-in-out;
 }
 
-.error__subtitle a:hover,
-.error__subtitle a:focus {
+.error__link:hover,
+.error__link:focus {
   color: var(--color-golden);
   transition: 0.3s ease-in-out;
 }
 
 .error {
+  margin: 0 auto;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -64,41 +65,59 @@
 @media (max-width: 980px) {
   .error__title {
     margin: 0 auto;
-    width: 510px;
-    font-size: 28px;
+    font-size: 40px;
+    width: 560px;
   }
 
   .error__subtitle {
     margin: 0 auto;
-    margin-bottom: 10px;
-    font-size: 28px;
-  }
-
-  .error__subtitle a {
-    font-size: 20px;
+    width: 560px;
   }
 
   .error {
-    width: 510px;
+    width: 560px;
   }
 
   .error__number {
-    font-size: 220px;
+    font-size: 240px;
   }
 
   .error__dish {
-    width: 220px;
+    width: 240px;
+  }
+}
+
+@media (max-width: 980px) and (orientation: landscape) {
+  .error__title {
+    font-size: 28px;
+  }
+
+  .error__subtitle {
+    font-size: 28px;
+  }
+
+  .error {
+    width: 480px;
+  }
+
+  .error__number {
+    font-size: 200px;
+  }
+
+  .error__dish {
+    width: 200px;
   }
 }
 
 @media (max-width: 660px) {
   .error__title {
+    font-size: 28px;
     width: 280px;
   }
 
   .error__subtitle {
+    font-size: 28px;
     width: 280px;
-    font-size: 32px;
   }
 
   .error {
@@ -111,6 +130,16 @@
 
   .error__dish {
     width: 120px;
+  }
+}
+
+@media (max-width: 660px) and (orientation: landscape) {
+  .error__title {
+    width: 500px;
+  }
+
+  .error__subtitle {
+    width: 500px;
   }
 }
 

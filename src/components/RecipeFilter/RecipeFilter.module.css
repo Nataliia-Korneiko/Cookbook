@@ -26,3 +26,9 @@
     width: 300px;
   }
 }
+
+@media (max-width: 660px) {
+  .input {
+    width: 145px;
+  }
+}
