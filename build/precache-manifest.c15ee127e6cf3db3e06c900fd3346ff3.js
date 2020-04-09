@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d21135c7707b1bf6a276ee4e9410866e",
+    "revision": "de23871c03cc78f1ef0653d4ecfcb971",
     "url": "/cookbook/index.html"
   },
   {
-    "revision": "c66f1254638c06b603fd",
-    "url": "/cookbook/static/css/main.786d8852.chunk.css"
+    "revision": "8ab6ba0a024cecb2c441",
+    "url": "/cookbook/static/css/main.e987d473.chunk.css"
   },
   {
     "revision": "7eed3b642a2ff94101d9",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cookbook/static/js/2.116c4190.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c66f1254638c06b603fd",
-    "url": "/cookbook/static/js/main.acf4f223.chunk.js"
+    "revision": "8ab6ba0a024cecb2c441",
+    "url": "/cookbook/static/js/main.74a021f8.chunk.js"
   },
   {
     "revision": "00bbaa9f9de6059476b9",
@@ -36,16 +36,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cookbook/static/media/backdrop-03.bd78375e.jpg"
   },
   {
-    "revision": "8481dad297c352715e1f320af1183006",
-    "url": "/cookbook/static/media/backdrop-04.8481dad2.png"
-  },
-  {
     "revision": "a8455906b1f5470c0aa9ff70db83c0ec",
-    "url": "/cookbook/static/media/backdrop-06.a8455906.jpg"
+    "url": "/cookbook/static/media/backdrop-04.a8455906.jpg"
   },
   {
     "revision": "885baa6a9774b243a8da9fa464e64c07",
-    "url": "/cookbook/static/media/backdrop-10.885baa6a.jpg"
+    "url": "/cookbook/static/media/backdrop-05.885baa6a.jpg"
+  },
+  {
+    "revision": "8481dad297c352715e1f320af1183006",
+    "url": "/cookbook/static/media/backdrop-06.8481dad2.png"
   },
   {
     "revision": "d543f4ce2f65dfcf64b541e95e28432a",

@@ -9,8 +9,10 @@
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
+    "redux": "^4.0.5",
     "shortid": "^2.2.15"
   },
   "scripts": {
@@ -51,6 +53,7 @@
     "eslint-plugin-react": "^7.16.0",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.3",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
