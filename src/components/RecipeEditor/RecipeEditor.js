@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import * as recipesActions from '../../redux/recipes/recipesActions';
 import LevelSelector from '../LevelSelector/LevelSelector';
 import Level from '../../utils/Level';
 import Button from '../ButtonEditor/ButtonEditor';
@@ -8,7 +10,7 @@ import s from './RecipeEditor.module.css';
 
 const options = Object.values(Level);
 
-export default class RecipeEditor extends Component {
+class RecipeEditor extends Component {
   static propTypes = {
     onSave: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
@@ -99,3 +101,10 @@ export default class RecipeEditor extends Component {
     );
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  onSave: recipe => dispatch(recipesActions.addRecipe(recipe)),
+  // onCancel: () => dispatch(recipesActions.closeCreateModal()),
+});
+
+export default connect(null, mapDispatchToProps)(RecipeEditor);

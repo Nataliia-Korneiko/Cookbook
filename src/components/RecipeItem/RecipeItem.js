@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import * as recipesActions from '../../redux/recipes/recipesActions';
 import Button from '../ButtonItem/ButtonItem';
 import s from './RecipeItem.module.css';
 
@@ -43,4 +45,15 @@ RecipeItem.propTypes = {
   onEditRecipe: PropTypes.func.isRequired,
 };
 
-export default RecipeItem;
+const mapStateToProps = (state, ownProps) => {
+  const item = state.recipes.data.find(recipe => recipe.id === ownProps.id);
+
+  return { ...item };
+};
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onDeleteRecipe: () => dispatch(recipesActions.deleteRecipe(ownProps.id)),
+  onEditRecipe: () => dispatch(recipesActions.updateRecipe(ownProps.id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeItem);

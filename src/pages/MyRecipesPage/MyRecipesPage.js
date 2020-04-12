@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import shortid from 'shortid';
+// import shortid from 'shortid';
+// import { connect } from 'react-redux';
+// import * as recipesActions from '../../redux/recipes/recipesActions';
 import RecipeEditor from '../../components/RecipeEditor/RecipeEditor';
 import RecipeList from '../../components/RecipeList/RecipeList';
 import RecipeFilter from '../../components/RecipeFilter/RecipeFilter';
@@ -13,11 +15,11 @@ import s from './MyRecipesPage.module.css';
 
 const moment = require('moment');
 
-const filterRecipes = (recipes, filter) => {
-  return recipes.filter(recipe =>
-    recipe.text.toLowerCase().includes(filter.toLowerCase()),
-  );
-};
+// const filterRecipes = (recipes, filter) => {
+//   return recipes.filter(recipe =>
+//     recipe.text.toLowerCase().includes(filter.toLowerCase()),
+//   );
+// };
 
 const legendOptions = [
   { level: Level.LOW, color: '#4caf50' },
@@ -28,7 +30,7 @@ const legendOptions = [
 export default class MyRecipesPage extends Component {
   state = {
     recipes: [],
-    filter: '',
+    // filter: '',
     isCreating: false,
     isEditing: false,
     selectedRecipeId: null,
@@ -60,9 +62,9 @@ export default class MyRecipesPage extends Component {
     }
   }
 
-  changeFilter = e => {
-    this.setState({ filter: e.target.value });
-  };
+  // changeFilter = e => {
+  //   this.setState({ filter: e.target.value });
+  // };
 
   /* Create recipe */
   openCreateModal = () => {
@@ -73,28 +75,28 @@ export default class MyRecipesPage extends Component {
     this.setState({ isCreating: false });
   };
 
-  addRecipe = recipe => {
-    const recipeToAdd = {
-      ...recipe,
-      id: shortid.generate(),
-      createDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
-    };
+  // addRecipe = recipe => {
+  //   const recipeToAdd = {
+  //     ...recipe,
+  //     id: shortid.generate(),
+  //     createDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
+  //   };
 
-    this.setState(
-      state => ({
-        recipes: [...state.recipes, recipeToAdd],
-        // recipes: [recipeToAdd, ...state.recipes],
-      }),
-      this.closeCreateModal,
-    );
-  };
+  //   this.setState(
+  //     state => ({
+  //       recipes: [...state.recipes, recipeToAdd],
+  //       // recipes: [recipeToAdd, ...state.recipes],
+  //     }),
+  //     this.closeCreateModal,
+  //   );
+  // };
 
   /* Delete recipe */
-  deleteRecipe = id => {
-    this.setState(state => ({
-      recipes: state.recipes.filter(recipe => recipe.id !== id),
-    }));
-  };
+  // deleteRecipe = id => {
+  //   this.setState(state => ({
+  //     recipes: state.recipes.filter(recipe => recipe.id !== id),
+  //   }));
+  // };
 
   /* Update recipe */
   openEditModal = id => {
@@ -133,12 +135,12 @@ export default class MyRecipesPage extends Component {
   render() {
     const {
       recipes,
-      filter,
+      // filter,
       isCreating,
       isEditing,
       selectedRecipeId,
     } = this.state;
-    const filteredRecipes = filterRecipes(recipes, filter);
+    // const filteredRecipes = filterRecipes(recipes, filter);
     let recipeInEdit = null;
     if (isEditing) {
       recipeInEdit = recipes.find(recipe => recipe.id === selectedRecipeId);
@@ -154,19 +156,21 @@ export default class MyRecipesPage extends Component {
               type="button"
               onClick={this.openCreateModal}
             />
-            <RecipeFilter value={filter} onChangeFilter={this.changeFilter} />
+            <RecipeFilter
+            //  value={filter} onChangeFilter={this.changeFilter}
+            />
             <Legend items={legendOptions} />
           </div>
           <RecipeList
-            items={filteredRecipes}
-            onDeleteRecipe={this.deleteRecipe}
-            onEditRecipe={this.openEditModal}
+          // items={filteredRecipes}
+          // onDeleteRecipe={this.deleteRecipe}
+          // onEditRecipe={this.openEditModal}
           />
           {isCreating && (
             <Modal onClose={this.closeCreateModal}>
               <RecipeEditor
-                onSave={this.addRecipe}
-                onCancel={this.closeCreateModal}
+              // onSave={this.addRecipe}
+              // onCancel={this.closeCreateModal}
               />
             </Modal>
           )}

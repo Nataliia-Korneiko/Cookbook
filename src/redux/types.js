@@ -6,7 +6,11 @@ const types = {
   UPDATE_RECIPE: 'UPDATE_RECIPE',
 
   // filter
-  FILTER_RECIPES: 'FILTER_RECIPES',
+  CHANGE_FILTER: 'CHANGE_FILTER',
+
+  // create modal
+  OPEN_CREATE_MODAL: 'OPEN_CREATE_MODAL',
+  CLOSE_CREATE_MODAL: 'CLOSE_CREATE_MODAL',
 };
 
 export default types;

@@ -1,16 +1,37 @@
+import shortid from 'shortid';
 import types from '../types';
 
-export const fetchRecipes = recipes => ({
+const moment = require('moment');
+
+export const fetchRecipes = data => ({
   type: types.FETCH_RECIPES,
   payload: {
-    recipes,
+    data,
   },
 });
+
+// -- with versions --
+// export const addRecipe = recipe => ({
+//   type: types.ADD_RECIPE,
+//   payload: {
+//     recipe: {
+//       id: shortid.generate(),
+//       versions: {
+//         ...recipe,
+//         createDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
+//       },
+//     },
+//   },
+// });
 
 export const addRecipe = recipe => ({
   type: types.ADD_RECIPE,
   payload: {
-    recipe,
+    data: {
+      id: shortid.generate(),
+      ...recipe,
+      createDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
+    },
   },
 });
 
@@ -21,16 +42,34 @@ export const deleteRecipe = id => ({
   },
 });
 
-export const changeRecipe = recipe => ({
+// export const updateRecipe = (text, description, level) => ({
+export const updateRecipe = id => ({
   type: types.UPDATE_RECIPE,
   payload: {
-    recipe,
+    data: {
+      // recipe,
+      // text,
+      // description,
+      // level,
+      id,
+      editDate: moment().format('MMMM Do YYYY, h:mm:ss A'),
+    },
   },
 });
 
-export const filterRecipes = value => ({
-  type: types.FILTER_RECIPES,
+export const changeFilter = value => ({
+  type: types.CHANGE_FILTER,
   payload: {
     filter: value,
   },
+});
+
+export const openCreateModal = () => ({
+  type: types.OPEN_CREATE_MODAL,
+  payload: true,
+});
+
+export const closeCreateModal = () => ({
+  type: types.CLOSE_CREATE_MODAL,
+  payload: false,
 });

@@ -1,19 +1,28 @@
+/* eslint-disable no-case-declarations */
+/* eslint-disable no-undef */
 import { combineReducers } from 'redux';
 import types from '../types';
 
 const recipesReducer = (state = [], { type, payload }) => {
   switch (type) {
     case types.FETCH_RECIPES:
-      return payload.recipes;
+      return payload.data;
 
     case types.ADD_RECIPE:
-      return [...state, payload.recipe];
+      return [...state, payload.data];
 
     case types.DELETE_RECIPE:
-      return state.filter(el => el.id !== payload.id);
+      return state.filter(recipe => recipe.id !== payload.id);
 
+    // Does not work!!!
     case types.UPDATE_RECIPE:
-      return payload.recipe;
+      // const updateRecipe = state.map(recipe =>
+      //   recipe.id === payload.id
+      //     ? { ...recipe, text, description, level }
+      //     : recipe,
+      // );
+      return payload.data;
+    // return [(payload.data: updateRecipe)];
 
     default:
       return state;
@@ -22,7 +31,7 @@ const recipesReducer = (state = [], { type, payload }) => {
 
 const filterReducer = (state = '', { type, payload }) => {
   switch (type) {
-    case types.FILTER_RECIPES:
+    case types.CHANGE_FILTER:
       return payload.filter;
 
     default:
@@ -30,7 +39,20 @@ const filterReducer = (state = '', { type, payload }) => {
   }
 };
 
+const createModalReducer = (state = false, { type }) => {
+  switch (type) {
+    case types.OPEN_CREATE_MODAL:
+      return true;
+    case types.CLOSE_CREATE_MODAL:
+      return false;
+
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
-  recipes: recipesReducer,
+  data: recipesReducer,
   filter: filterReducer,
+  isCreateModalOpen: createModalReducer,
 });
