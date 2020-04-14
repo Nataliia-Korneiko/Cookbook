@@ -3,6 +3,16 @@
 import { combineReducers } from 'redux';
 import types from '../types';
 
+// does not work!!!
+// const recipesLocalStorage = localStorage.getItem('recipes');
+// let recipes = [];
+
+// if (recipesLocalStorage) {
+//   recipes = JSON.parse(recipesLocalStorage);
+// }
+
+// const initialState = { recipes };
+
 const recipesReducer = (state = [], { type, payload }) => {
   switch (type) {
     case types.FETCH_RECIPES:
@@ -39,12 +49,20 @@ const filterReducer = (state = '', { type, payload }) => {
   }
 };
 
-const createModalReducer = (state = false, { type }) => {
+const creatingReducer = (state = false, { type, payload }) => {
   switch (type) {
-    case types.OPEN_CREATE_MODAL:
-      return true;
-    case types.CLOSE_CREATE_MODAL:
-      return false;
+    case types.CREATING:
+      return payload.isCreating;
+
+    default:
+      return state;
+  }
+};
+
+const editingReducer = (state = false, { type, payload }) => {
+  switch (type) {
+    case types.EDITING:
+      return payload.isEditing;
 
     default:
       return state;
@@ -54,5 +72,6 @@ const createModalReducer = (state = false, { type }) => {
 export default combineReducers({
   data: recipesReducer,
   filter: filterReducer,
-  isCreateModalOpen: createModalReducer,
+  isCreating: creatingReducer,
+  isEditing: editingReducer,
 });

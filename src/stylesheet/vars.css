@@ -13,10 +13,12 @@
   --bg-color-white: #ffffff;
   --bg-color-black: #000000;
   --bg-color-golden: #c9a131;
-  --bg-color-backdrop: rgba(0, 0, 0, 0.4);
+  --bg-color-backdrop: rgba(0, 0, 0, 0.55);
   --bg-color-dark-backdrop: rgb(0, 0, 0, 0.65);
 
   --box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+  --box-shadow-light: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 
   --text-shadow: -0 -1px 2px #000000, 0 -1px 2px #000000, -0 1px 2px #000000,
     0 1px 2px #000000, -1px -0 2px #000000, 1px -0 2px #000000,

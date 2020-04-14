@@ -64,12 +64,16 @@ export const changeFilter = value => ({
   },
 });
 
-export const openCreateModal = () => ({
-  type: types.OPEN_CREATE_MODAL,
-  payload: true,
+export const creating = () => ({
+  type: types.CREATING,
+  payload: {
+    isCreating: true,
+  },
 });
 
-export const closeCreateModal = () => ({
-  type: types.CLOSE_CREATE_MODAL,
-  payload: false,
+export const editing = () => ({
+  type: types.EDITING,
+  payload: {
+    isEditing: true,
+  },
 });

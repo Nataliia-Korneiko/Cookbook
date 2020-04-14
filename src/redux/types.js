@@ -8,9 +8,19 @@ const types = {
   // filter
   CHANGE_FILTER: 'CHANGE_FILTER',
 
+  // creating
+  CREATING: 'CREATING',
+
+  // editing
+  EDITING: 'EDITING',
+
   // create modal
   OPEN_CREATE_MODAL: 'OPEN_CREATE_MODAL',
   CLOSE_CREATE_MODAL: 'CLOSE_CREATE_MODAL',
+
+  // edit modal
+  OPEN_EDIT_MODAL: 'OPEN_EDIT_MODAL',
+  CLOSE_EDIT_MODAL: 'CLOSE_EDIT_MODAL',
 };
 
 export default types;

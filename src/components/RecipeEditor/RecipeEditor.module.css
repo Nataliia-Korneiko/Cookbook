@@ -68,6 +68,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   background-color: var(--bg-color-golden);
+  cursor: pointer;
   outline: none;
 }
 
