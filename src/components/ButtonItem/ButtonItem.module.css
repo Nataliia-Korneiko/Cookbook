@@ -13,11 +13,11 @@
   outline: none;
   cursor: pointer;
   transition: 0.8s ease-in-out;
+  box-shadow: var(--box-shadow-light);
 }
 
 .button:hover,
 .button:focus {
   background-color: var(--bg-color-golden);
   transition: 0.8s ease-in-out;
-  box-shadow: var(--box-shadow-light);
 }

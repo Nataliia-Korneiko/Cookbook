@@ -29,7 +29,7 @@ const legendOptions = [
 
 export default class MyRecipesPage extends Component {
   state = {
-    recipes: [],
+    // recipes: [],
     // filter: '',
     isCreating: false,
     isEditing: false,

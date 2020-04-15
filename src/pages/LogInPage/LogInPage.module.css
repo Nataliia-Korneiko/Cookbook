@@ -17,6 +17,15 @@
   position: relative;
   flex: 1 0 auto;
 }
+.main__title {
+  margin: 0 auto;
+  width: 620px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--color-white);
+  text-align: center;
+}
 
 @media (max-width: 1300px) {
   .container {

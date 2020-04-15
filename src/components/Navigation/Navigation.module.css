@@ -61,6 +61,14 @@
   display: block;
 }
 
+.active__link {
+  color: var(--color-white);
+}
+
+.active__link::after {
+  display: block;
+}
+
 .burger {
   position: relative;
   top: 0;

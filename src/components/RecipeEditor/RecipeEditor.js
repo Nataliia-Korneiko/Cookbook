@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as recipesActions from '../../redux/recipes/recipesActions';
+import * as globalActions from '../../redux/global/globalActions';
 import LevelSelector from '../LevelSelector/LevelSelector';
 import Level from '../../utils/Level';
 import Button from '../ButtonEditor/ButtonEditor';
@@ -104,7 +105,7 @@ class RecipeEditor extends Component {
 
 const mapDispatchToProps = dispatch => ({
   onSave: recipe => dispatch(recipesActions.addRecipe(recipe)),
-  // onCancel: () => dispatch(recipesActions.closeCreateModal()),
+  onCancel: () => dispatch(globalActions.closeCreateModal()),
 });
 
 export default connect(null, mapDispatchToProps)(RecipeEditor);

@@ -15,27 +15,48 @@ const Navigation = () => {
 
         <ul className={s.navigation__list}>
           <li>
-            <NavLink exact to={routes.HOME} className={s.navigation__link}>
+            <NavLink
+              exact
+              to={routes.HOME}
+              className={s.navigation__link}
+              activeClassName={s.active__link}
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to={routes.ABOUT} className={s.navigation__link}>
+            <NavLink
+              to={routes.ABOUT}
+              className={s.navigation__link}
+              activeClassName={s.active__link}
+            >
               About
             </NavLink>
           </li>
           <li>
-            <NavLink to={routes.MY_RECIPES} className={s.navigation__link}>
+            <NavLink
+              to={routes.MY_RECIPES}
+              className={s.navigation__link}
+              activeClassName={s.active__link}
+            >
               My Recipes
             </NavLink>
           </li>
           <li>
-            <NavLink to={routes.LOG_IN} className={s.navigation__link}>
+            <NavLink
+              to={routes.LOG_IN}
+              className={s.navigation__link}
+              activeClassName={s.active__link}
+            >
               Log In
             </NavLink>
           </li>
           <li>
-            <NavLink to={routes.SIGN_UP} className={s.navigation__link}>
+            <NavLink
+              to={routes.SIGN_UP}
+              className={s.navigation__link}
+              activeClassName={s.active__link}
+            >
               Sign Up
             </NavLink>
           </li>

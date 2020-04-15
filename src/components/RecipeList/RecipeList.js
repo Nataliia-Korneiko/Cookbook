@@ -29,7 +29,7 @@ RecipeList.propTypes = {
       id: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
-  onDeleteRecipe: PropTypes.func.isRequired,
+  // onDeleteRecipe: PropTypes.func.isRequired,
 };
 
 // const filterRecipes = (recipes, filter) => {
