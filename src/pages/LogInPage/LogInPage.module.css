@@ -16,14 +16,19 @@
 .main {
   position: relative;
   flex: 1 0 auto;
+  /* ----- */
+  height: calc(100vh - 162px);
+  overflow-y: scroll;
 }
+
 .main__title {
   margin: 0 auto;
   width: 620px;
   font-family: 'Dancing Script', cursive;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 900;
   color: var(--color-white);
+  text-shadow: var(--text-shadow);
   text-align: center;
 }
 
@@ -42,6 +47,11 @@
 @media (max-width: 660px) {
   .container {
     width: 300px;
+  }
+
+  .main__title {
+    width: 300px;
+    font-size: 40px;
   }
 }
 

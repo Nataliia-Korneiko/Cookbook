@@ -11,7 +11,7 @@ const RecipeFilter = ({ value, onChangeFilter }) => (
     value={value}
     // onChange={onChangeFilter}
     onChange={e => onChangeFilter(e.target.value)}
-    placeholder="Enter text"
+    placeholder="Enter text..."
   />
 );
 

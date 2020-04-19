@@ -1,0 +1,26 @@
+.link__google {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: block;
+  width: 124px;
+  height: 44px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-black);
+  background-color: var(--bg-color-white);
+  box-shadow: var(--box-shadow-light);
+}
+
+.link__wrapper {
+  display: flex;
+  padding-left: 16px;
+  padding-top: 8px;
+}
+
+.link__span {
+  padding-left: 6px;
+  line-height: 28px;
+}
