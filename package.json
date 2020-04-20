@@ -5,6 +5,7 @@
   "homepage": "https://Nataliia-Korneiko.github.io/cookbook",
   "dependencies": {
     "gh-pages": "^2.2.0",
+    "indicative": "^7.4.4",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
