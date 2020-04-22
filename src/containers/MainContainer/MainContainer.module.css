@@ -1,0 +1,11 @@
+.control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 660px) {
+  .control {
+    flex-wrap: wrap;
+  }
+}
