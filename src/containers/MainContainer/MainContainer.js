@@ -80,8 +80,7 @@ export default class MainContainer extends Component {
 
     this.setState(
       state => ({
-        recipes: [...state.recipes, recipeToAdd],
-        // recipes: [recipeToAdd, ...state.recipes],
+        recipes: [recipeToAdd, ...state.recipes],
       }),
       this.closeCreateModal,
     );

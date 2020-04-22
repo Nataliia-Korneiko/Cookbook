@@ -69,6 +69,7 @@ export default class RecipeEditor extends Component {
             value={text}
             onChange={this.handleChange}
             placeholder="Title..."
+            maxLength="60"
           />
         </label>
 

@@ -16,6 +16,7 @@
   width: 44px;
   background-color: var(--bg-color-black);
   box-shadow: var(--box-shadow);
+  outline: none;
 }
 
 .navigation__list {
@@ -33,6 +34,7 @@
   font-weight: 600;
   color: var(--color-golden);
   text-transform: uppercase;
+  outline: none;
   text-shadow: var(--text-shadow);
   transition: 0.3s ease-in-out;
 }

@@ -1,6 +1,5 @@
 .button {
-  margin-bottom: 4px;
-  width: 270px;
+  width: 120px;
   height: 44px;
   border: 2px solid var(--color-golden);
   border-radius: 5px;

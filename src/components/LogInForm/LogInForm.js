@@ -62,7 +62,6 @@ class LogInForm extends Component {
     const { email, password, error } = this.state;
     return (
       <div className={s.wrapper}>
-        <LinkGoogle />
         <form
           className={s.form}
           onSubmit={this.handleSubmit}
@@ -73,7 +72,7 @@ class LogInForm extends Component {
             className={`${s.label} ${s.label__email}`}
             htmlFor={this.ids.emailId}
           >
-            E-mail&#58;
+            Email&#58;
             <input
               className={s.input}
               id={this.ids.emailId}
@@ -101,7 +100,10 @@ class LogInForm extends Component {
             />
             {error && <span className={s.error}>{error.password}</span>}
           </label>
-          <Button label="Log in" type="submit" />
+          <div className={s.combination}>
+            <Button label="Log in" type="submit" />
+            <LinkGoogle />
+          </div>
           <p className={s.relink}>Don&#39;t have an account?</p>
           <NavLink to={routes.SIGN_UP} className={s.link}>
             Sign Up

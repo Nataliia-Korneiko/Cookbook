@@ -54,6 +54,7 @@
   font-weight: 800;
   color: var(--color-golden);
   text-align: center;
+  word-break: break-all;
 }
 
 .title::after {

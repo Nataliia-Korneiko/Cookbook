@@ -8,7 +8,7 @@ import Button from '../ButtonAuthorization/ButtonAuthorization';
 import s from './SignUpForm.module.css';
 
 const validationRules = {
-  name: 'required|min:2|max:20',
+  name: 'required|min:2|max:20|alpha',
   email: 'required|email',
   password: 'required|min:6|max:12',
 };
@@ -17,6 +17,7 @@ const validationMessages = {
   'name.required': 'This field is required!',
   'name.min': 'Name must be at least 2 characters!',
   'name.max': 'Name must be no more than 20 characters!',
+  'name.alpha': 'Enter a valid name!',
   'email.required': 'This field is required!',
   'email.email': 'Enter a valid email address!',
   'password.required': 'This field is required!',
@@ -68,7 +69,6 @@ class SignUpForm extends Component {
     const { name, email, password, error } = this.state;
     return (
       <div className={s.wrapper}>
-        <LinkGoogle />
         <form
           className={s.form}
           onSubmit={this.handleSubmit}
@@ -95,7 +95,7 @@ class SignUpForm extends Component {
             className={`${s.label} ${s.label__email}`}
             htmlFor={this.ids.emailId}
           >
-            E-mail&#58;
+            Email&#58;
             <input
               className={s.input}
               id={this.ids.emailId}
@@ -123,7 +123,10 @@ class SignUpForm extends Component {
             />
             {error && <span className={s.error}>{error.password}</span>}
           </label>
-          <Button label="Sign Up" type="submit" />
+          <div className={s.combination}>
+            <Button label="Log in" type="submit" />
+            <LinkGoogle />
+          </div>
           <p className={s.relink}>Already have an account?</p>
           <NavLink to={routes.LOG_IN} className={s.link}>
             Log In

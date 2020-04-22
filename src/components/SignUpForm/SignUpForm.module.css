@@ -31,7 +31,7 @@
 
 .label__name,
 .label__password {
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 .label__email {
@@ -39,7 +39,7 @@
 }
 
 .input {
-  margin-bottom: 4px;
+  margin: 4px 0;
   padding: 0 10px;
   display: block;
   width: 100%;
@@ -60,11 +60,17 @@
   color: var(--color-orange);
   width: 100%;
   font-weight: 500;
-  z-index: 1;
 }
 
 .error::first-letter {
   text-transform: uppercase;
+}
+
+.combination {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
 }
 
 .relink {
@@ -73,4 +79,5 @@
 
 .link {
   color: var(--color-orange);
+  outline: none;
 }
