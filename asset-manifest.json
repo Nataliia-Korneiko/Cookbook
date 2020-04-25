@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/cookbook/static/css/main.5247f450.chunk.css",
-    "main.js": "/cookbook/static/js/main.3d423c18.chunk.js",
-    "main.js.map": "/cookbook/static/js/main.3d423c18.chunk.js.map",
+    "main.css": "/cookbook/static/css/main.f63cba2f.chunk.css",
+    "main.js": "/cookbook/static/js/main.4db0dc0c.chunk.js",
+    "main.js.map": "/cookbook/static/js/main.4db0dc0c.chunk.js.map",
     "runtime-main.js": "/cookbook/static/js/runtime-main.51ed3048.js",
     "runtime-main.js.map": "/cookbook/static/js/runtime-main.51ed3048.js.map",
     "static/js/2.d466e70f.chunk.js": "/cookbook/static/js/2.d466e70f.chunk.js",
     "static/js/2.d466e70f.chunk.js.map": "/cookbook/static/js/2.d466e70f.chunk.js.map",
     "index.html": "/cookbook/index.html",
-    "precache-manifest.296a4257b53cfbc2dd13f7dfff8baad8.js": "/cookbook/precache-manifest.296a4257b53cfbc2dd13f7dfff8baad8.js",
+    "precache-manifest.e3e241a28852e3f16db87019bb362b48.js": "/cookbook/precache-manifest.e3e241a28852e3f16db87019bb362b48.js",
     "service-worker.js": "/cookbook/service-worker.js",
-    "static/css/main.5247f450.chunk.css.map": "/cookbook/static/css/main.5247f450.chunk.css.map",
+    "static/css/main.f63cba2f.chunk.css.map": "/cookbook/static/css/main.f63cba2f.chunk.css.map",
     "static/js/2.d466e70f.chunk.js.LICENSE.txt": "/cookbook/static/js/2.d466e70f.chunk.js.LICENSE.txt",
     "static/media/HomePage.module.css": "/cookbook/static/media/backdrop-01.a3fa4278.jpg",
     "static/media/AboutPage.module.css": "/cookbook/static/media/backdrop-02.0d6101d3.jpg",
@@ -19,7 +19,7 @@
     "static/media/SignUpPage.module.css": "/cookbook/static/media/backdrop-05.885baa6a.jpg",
     "static/media/Modal.module.css": "/cookbook/static/media/backdrop-06.8481dad2.png",
     "static/media/RecipeEditor.module.css": "/cookbook/static/media/chef.d543f4ce.png",
-    "static/media/main.css": "/cookbook/static/media/montserrat-v14-latin-regular.bc3aa95d.woff2",
+    "static/media/main.css": "/cookbook/static/media/share-tech-mono-v9-latin-regular.e9f04842.woff2",
     "static/media/dish.png": "/cookbook/static/media/dish.a6696f39.png",
     "static/media/icon-google.81ad048e.svg": "/cookbook/static/media/icon-google.81ad048e.svg",
     "static/media/logo.png": "/cookbook/static/media/logo.3a20da0d.png",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.51ed3048.js",
     "static/js/2.d466e70f.chunk.js",
-    "static/css/main.5247f450.chunk.css",
-    "static/js/main.3d423c18.chunk.js"
+    "static/css/main.f63cba2f.chunk.css",
+    "static/js/main.4db0dc0c.chunk.js"
   ]
 }
