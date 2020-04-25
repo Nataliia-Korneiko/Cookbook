@@ -15,14 +15,14 @@ const validationRules = {
 
 const validationMessages = {
   'name.required': 'This field is required!',
-  'name.min': 'Name must be at least 2 characters!',
-  'name.max': 'Name must be no more than 20 characters!',
+  'name.min': 'Must be at least 2 characters!',
+  'name.max': 'Must be no more than 20 characters!',
   'name.alpha': 'Enter a valid name!',
   'email.required': 'This field is required!',
   'email.email': 'Enter a valid email address!',
   'password.required': 'This field is required!',
-  'password.min': 'Password must be at least 6 characters!',
-  'password.max': 'Password must be no more than 12 characters!',
+  'password.min': 'Must be at least 6 characters!',
+  'password.max': 'Must be no more than 12 characters!',
 };
 
 class SignUpForm extends Component {

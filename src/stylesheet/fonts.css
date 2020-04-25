@@ -49,3 +49,14 @@
       format('woff2'),
     url('../assets/fonts/marck-script-v10-cyrillic-regular.woff') format('woff');
 }
+
+/* share-tech-mono-regular - latin */
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Share Tech Mono'), local('ShareTechMono-Regular'),
+    url('../assets/fonts/share-tech-mono-v9-latin-regular.woff2')
+      format('woff2'),
+    url('../assets/fonts/share-tech-mono-v9-latin-regular.woff') format('woff');
+}

@@ -16,8 +16,8 @@ const validationMessages = {
   'email.required': 'This field is required!',
   'email.email': 'Enter a valid email address!',
   'password.required': 'This field is required!',
-  'password.min': 'Password must be at least 6 characters!',
-  'password.max': 'Password must be no more than 12 characters!',
+  'password.min': 'Must be at least 6 characters!',
+  'password.max': 'Must be no more than 12 characters!',
 };
 
 class LogInForm extends Component {

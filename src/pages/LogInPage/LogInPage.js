@@ -1,3 +1,4 @@
+/* eslint-disable react/no-this-in-sfc */
 import React from 'react';
 import Header from '../../components/Header/Header';
 import LogInForm from '../../components/LogInForm/LogInForm';
@@ -9,9 +10,7 @@ const LogInPage = () => {
     <div className={s.wrapper}>
       <Header />
       <main className={`${s.main} ${s.container}`}>
-        <p className={s.main__title}>
-          Sorry, this page is under construction...
-        </p>
+        <p className={s.main__title}>This page is under construction</p>
         <LogInForm />
       </main>
       <Footer />

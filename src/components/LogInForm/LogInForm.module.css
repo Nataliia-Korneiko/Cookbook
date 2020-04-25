@@ -1,6 +1,6 @@
 .wrapper {
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 12px 0;
   width: 300px;
   border: none;
   border-radius: 8px;
@@ -34,7 +34,7 @@
 }
 
 .label__password {
-  margin-bottom: 34px;
+  margin-bottom: 28px;
 }
 
 .input {

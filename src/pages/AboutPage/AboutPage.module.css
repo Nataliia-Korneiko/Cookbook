@@ -140,9 +140,3 @@
     width: 230px;
   }
 }
-
-@media (max-width: 300px) {
-  .wrapper {
-    overflow-x: scroll;
-  }
-}

@@ -9,9 +9,7 @@ const SignUpPage = () => {
     <div className={s.wrapper}>
       <Header />
       <main className={`${s.main} ${s.container}`}>
-        <p className={s.main__title}>
-          Sorry, this page is under construction...
-        </p>
+        <p className={s.main__title}>This page is under construction</p>
         <SignUpForm />
       </main>
       <Footer />

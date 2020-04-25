@@ -16,20 +16,39 @@
 .main {
   position: relative;
   flex: 1 0 auto;
-  /* ----- */
-  height: calc(100vh - 162px);
-  overflow-y: scroll;
 }
 
 .main__title {
   margin: 0 auto;
-  width: 620px;
-  font-family: 'Dancing Script', cursive;
-  font-size: 44px;
-  font-weight: 900;
+  margin-bottom: 10px;
+  width: 31ch;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 36px;
   color: var(--color-white);
   text-shadow: var(--text-shadow);
-  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid var(--color-golden);
+  animation: printed-text 5s steps(31),
+    flashing-border 0.75s step-start infinite;
+}
+
+@keyframes flashing-border {
+  0% {
+    border-color: var(--color-golden);
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: var(--color-golden);
+  }
+}
+
+@keyframes printed-text {
+  0% {
+    width: 0%;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -50,13 +69,7 @@
   }
 
   .main__title {
-    width: 300px;
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 300px) {
-  .wrapper {
-    overflow-x: scroll;
+    font-size: 18px;
+    border-right: 2px solid var(--color-golden);
   }
 }
