@@ -44,20 +44,30 @@ body {
   font-weight: 300;
 }
 
-/* ::-webkit-scrollbar-track {
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
+@media (max-width: 830px) and (orientation: landscape) {
+  body {
+    display: none;
+  }
 
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background-color: var(--bg-color-golden);
-  background-image: url('https://yraaa.ru/_pu/24/59610063.png');
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  html {
+    background-color: var(--bg-color-golden);
+  }
 
-::-webkit-scrollbar {
-  width: 10px;
-} */
+  html:before {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: 'Please return the device to portrait orientation!';
+    width: 470px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-white);
+    text-transform: uppercase;
+    text-shadow: var(--text-shadow);
+    z-index: 100;
+  }
+}

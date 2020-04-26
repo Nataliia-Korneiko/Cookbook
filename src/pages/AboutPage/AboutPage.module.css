@@ -110,7 +110,7 @@
   }
 }
 
-@media (max-width: 660px) and (orientation: landscape) {
+/* @media (max-width: 660px) and (orientation: landscape) {
   .about {
     width: 170px;
   }
@@ -123,7 +123,7 @@
   .about__title::after {
     width: 170px;
   }
-}
+} */
 
 @media (max-width: 320px) {
   .about {

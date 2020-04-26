@@ -20,7 +20,7 @@
 
 .main__title {
   margin: 0 auto;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   width: 31ch;
   font-family: 'Share Tech Mono', monospace;
   font-size: 36px;
@@ -33,6 +33,12 @@
     flashing-border 0.75s step-start infinite;
 }
 
+@keyframes printed-text {
+  0% {
+    width: 0%;
+  }
+}
+
 @keyframes flashing-border {
   0% {
     border-color: var(--color-golden);
@@ -42,12 +48,6 @@
   }
   100% {
     border-color: var(--color-golden);
-  }
-}
-
-@keyframes printed-text {
-  0% {
-    width: 0%;
   }
 }
 

@@ -114,7 +114,7 @@
   }
 }
 
-@media (max-width: 660px) and (orientation: landscape) {
+/* @media (max-width: 660px) and (orientation: landscape) {
   .quote {
     padding: 10px;
     font-size: 20px;
@@ -123,4 +123,4 @@
   .quote__description {
     margin-bottom: 0;
   }
-}
+} */

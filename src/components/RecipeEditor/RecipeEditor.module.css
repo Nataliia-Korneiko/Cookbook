@@ -132,7 +132,7 @@
   }
 }
 
-@media (max-width: 568px) and (orientation: landscape) {
+/* @media (max-width: 568px) and (orientation: landscape) {
   .form {
     padding: 20px 0;
     width: 500px;
@@ -145,4 +145,4 @@
   .label {
     width: 380px;
   }
-}
+} */
