@@ -4,6 +4,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import RecipeEditor from '../RecipeEditor';
 import LevelSelector from '../../LevelSelector/LevelSelector';
+import Button from '../../ButtonEditor/ButtonEditor';
 
 describe('RecipeEditor component', () => {
   const props = {
@@ -35,7 +36,7 @@ describe('RecipeEditor component', () => {
   });
 
   it('renders one form', () => {
-    expect(newRecipeEditor.find('form.recipes__form')).toHaveLength(1);
+    expect(newRecipeEditor.find('form')).toHaveLength(1);
   });
 
   it('renders three label', () => {
@@ -53,24 +54,18 @@ describe('RecipeEditor component', () => {
   });
 
   it('renders one div', () => {
-    expect(newRecipeEditor.find('div.recipes__buttons')).toHaveLength(1);
-  });
-
-  it('renders one button', () => {
-    expect(newRecipeEditor.find('button[type="submit"]')).toHaveLength(1);
-  });
-
-  it('renders one button', () => {
-    expect(newRecipeEditor.find('button[type="button"]')).toHaveLength(1);
+    expect(newRecipeEditor.find('div')).toHaveLength(1);
   });
 
   it('renders a LevelSelector', () => {
-    const wrapped = shallow(<RecipeEditor />);
-
-    expect(wrapped.find(LevelSelector).length).toBe(1);
+    expect(newRecipeEditor.find(LevelSelector)).toHaveLength(1);
   });
 
-  describe('callbacks', () => {
+  it('renders a Button', () => {
+    expect(newRecipeEditor.find(Button)).toHaveLength(2);
+  });
+
+  describe('callback', () => {
     let wrapped;
 
     beforeEach(() => {
@@ -81,16 +76,33 @@ describe('RecipeEditor component', () => {
       const submitEventMock = {
         preventDefault: () => null,
       };
-
       const onSavePropMock = jest.fn();
       const props = {
         onSave: onSavePropMock,
       };
 
       wrapped.setProps(props);
-      wrapped.find('form.recipes__form').simulate('submit', submitEventMock);
+      wrapped.find('form').simulate('submit', submitEventMock);
+      expect(onSavePropMock.mock.calls.length).toEqual(1);
+    });
 
-      expect(onSavePropMock.mock.calls.length).toBe(1);
+    it('onCancel prop has been called on click', () => {
+      const mockCallBack = jest.fn();
+      const wrapped = shallow(<Button onClick={mockCallBack} />);
+
+      wrapped.find('button').simulate('click');
+      wrapped.update();
+      expect(mockCallBack.mock.calls.length).toEqual(1);
+      expect(newRecipeEditor.state('text')).toEqual('');
+    });
+  });
+
+  describe('change input', () => {
+    it('text check', () => {
+      newRecipeEditor.find('input[type="text"]').simulate('change', {
+        target: { name: 'text', value: 'test text' },
+      });
+      expect(newRecipeEditor.state('text')).toEqual('test text');
     });
   });
 });

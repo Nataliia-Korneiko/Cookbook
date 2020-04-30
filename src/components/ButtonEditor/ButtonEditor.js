@@ -12,12 +12,14 @@ const Button = ({ type, label, onClick }) => {
 };
 
 Button.propTypes = {
-  type: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  label: PropTypes.string,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
+  type: '',
+  label: '',
   onClick: () => null,
 };
 

@@ -21,8 +21,8 @@ const Legend = ({ items }) => (
 Legend.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      color: PropTypes.string.isRequired,
       level: PropTypes.string.isRequired,
+      color: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
 };

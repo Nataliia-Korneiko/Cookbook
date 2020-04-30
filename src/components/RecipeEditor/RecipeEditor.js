@@ -10,8 +10,10 @@ const options = Object.values(Level);
 
 export default class RecipeEditor extends Component {
   static propTypes = {
-    onSave: PropTypes.func.isRequired,
-    onCancel: PropTypes.func.isRequired,
+    // onSave: PropTypes.func.isRequired,
+    // onCancel: PropTypes.func.isRequired,
+    onSave: PropTypes.func,
+    onCancel: PropTypes.func,
     text: PropTypes.string,
     description: PropTypes.string,
     level: PropTypes.string,
@@ -20,6 +22,8 @@ export default class RecipeEditor extends Component {
   };
 
   static defaultProps = {
+    onSave: () => null,
+    onCancel: () => null,
     text: '',
     description: '',
     level: Level.NORMAL,

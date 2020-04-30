@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { shallow } from 'enzyme';
 import Modal from '../Modal';
@@ -8,7 +9,7 @@ describe('Modal component', () => {
     onClose: () => null,
   };
 
-  const newModal = shallow(<Modal />);
+  const newModal = shallow(<Modal {...props} />);
 
   it('renders a properly', () => {
     expect(newModal).toMatchSnapshot();

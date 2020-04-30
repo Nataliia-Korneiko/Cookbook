@@ -2,11 +2,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import RecipeList from '../RecipeList';
-import Recipe from '../../Recipe/Recipe';
+import RecipeItem from '../../RecipeItem/RecipeItem';
 
 describe('RecipeList component', () => {
   const props = {
-    items: [{ id: 1 }],
+    items: [{ id: 'aHe4TE8yr' }],
     onDeleteRecipe: () => null,
     onEditRecipe: () => null,
   };
@@ -18,14 +18,14 @@ describe('RecipeList component', () => {
   });
 
   it('renders one ul', () => {
-    expect(newRecipeList.find('ul.recipes__list')).toHaveLength(1);
+    expect(newRecipeList.find('ul')).toHaveLength(1);
   });
 
   it('renders three li', () => {
-    expect(newRecipeList.find('li.recipes__item')).toHaveLength(1);
+    expect(newRecipeList.find('li')).toHaveLength(1);
   });
 
-  it('renders a Recipe', () => {
-    expect(newRecipeList.find(Recipe)).toHaveLength(1);
+  it('renders a RecipeItem', () => {
+    expect(newRecipeList.find(RecipeItem)).toHaveLength(1);
   });
 });

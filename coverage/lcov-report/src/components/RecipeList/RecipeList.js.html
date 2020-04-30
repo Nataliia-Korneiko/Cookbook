@@ -1,5 +1,7 @@
+
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>Code coverage report for src/components/RecipeList/RecipeList.js</title>
     <meta charset="utf-8" />
@@ -12,40 +14,48 @@
         }
     </style>
 </head>
+    
 <body>
 <div class='wrapper'>
-  <div class='pad1'>
-    <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">src/components/RecipeList</a> RecipeList.js
-    </h1>
-    <div class='clearfix'>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
-        <span class="quiet">Statements</span>
-        <span class='fraction'>4/6</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
-        <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
-        <span class="quiet">Functions</span>
-        <span class='fraction'>2/4</span>
-      </div>
-      <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
-        <span class="quiet">Lines</span>
-        <span class='fraction'>4/6</span>
-      </div>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/RecipeList</a> RecipeList.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">66.67% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>4/6</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">50% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>2/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">66.67% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>4/6</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
     </div>
-    <p class="quiet">
-      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
-    </p>
-  </div>
-  <div class='status-line medium'></div>
-<pre><table class="coverage">
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
 <a name='L3'></a><a href='#L3'>3</a>
@@ -83,8 +93,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -98,7 +108,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -111,18 +121,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Recipe from '../Recipe/Recipe';
+import RecipeItem from '../RecipeItem/RecipeItem';
 import s from './RecipeList.module.css';
 &nbsp;
 const RecipeList = ({ items, onDeleteRecipe, onEditRecipe }) =&gt;
   items.length &gt; 0 &amp;&amp; (
-    &lt;ul className={s.recipes__list}&gt;
+    &lt;ul className={s.list}&gt;
       {items.map(item =&gt; (
-        &lt;li className={s.recipes__item} key={item.id}&gt;
-          &lt;Recipe
+        &lt;li className={s.item} key={item.id}&gt;
+          &lt;RecipeItem
             {...item}
             onDeleteRecipe={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >onDeleteRecipe(item.id)}</span>
-            onEdit={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >onEditRecipe(item.id)}</span>
+            onEditRecipe={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >onEditRecipe(item.id)}</span>
           /&gt;
         &lt;/li&gt;
       ))}
@@ -132,31 +142,31 @@ const RecipeList = ({ items, onDeleteRecipe, onEditRecipe }) =&gt;
 RecipeList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
   onDeleteRecipe: PropTypes.func.isRequired,
 };
 &nbsp;
 export default RecipeList;
-&nbsp;</pre></td></tr>
-</table></pre>
-<div class='push'></div><!-- for sticky footer -->
-</div><!-- /wrapper -->
-<div class='footer quiet pad2 space-top1 center small'>
-  Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Mar 18 2020 20:00:42 GMT+0200 (GMT+02:00)
-</div>
-</div>
-<script src="../../../prettify.js"></script>
-<script>
-window.onload = function () {
-        if (typeof prettyPrint === 'function') {
-            prettyPrint();
-        }
-};
-</script>
-<script src="../../../sorter.js"></script>
-<script src="../../../block-navigation.js"></script>
-</body>
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Thu Apr 30 2020 23:55:36 GMT+0300 (GMT+03:00)
+            </div>
+        </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
 </html>
+    

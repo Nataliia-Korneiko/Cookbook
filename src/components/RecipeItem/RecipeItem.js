@@ -29,18 +29,32 @@ const RecipeItem = ({
 );
 
 RecipeItem.defaultProps = {
+  text: '',
+  description: '',
+  level: '',
   createDate: '',
   editDate: '',
+  onDeleteRecipe: () => null,
+  onEditRecipe: () => null,
+  // onDeleteRecipe: PropTypes.func.isRequired,
+  // onEditRecipe: PropTypes.func.isRequired,
 };
 
 RecipeItem.propTypes = {
-  text: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  level: PropTypes.string.isRequired,
+  // text: PropTypes.string.isRequired,
+  // description: PropTypes.string.isRequired,
+  // level: PropTypes.string.isRequired,
+  // createDate: PropTypes.string,
+  // editDate: PropTypes.string,
+  // onDeleteRecipe: PropTypes.func.isRequired,
+  // onEditRecipe: PropTypes.func.isRequired,
+  text: PropTypes.string,
+  description: PropTypes.string,
+  level: PropTypes.string,
   createDate: PropTypes.string,
   editDate: PropTypes.string,
-  onDeleteRecipe: PropTypes.func.isRequired,
-  onEditRecipe: PropTypes.func.isRequired,
+  onDeleteRecipe: PropTypes.func,
+  onEditRecipe: PropTypes.func,
 };
 
 export default RecipeItem;

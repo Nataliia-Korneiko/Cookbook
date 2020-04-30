@@ -19,14 +19,14 @@ describe('Legend component', () => {
   });
 
   it('renders one ul', () => {
-    expect(newLegend.find('ul.recipes__list')).toHaveLength(1);
+    expect(newLegend.find('ul')).toHaveLength(1);
   });
 
   it('renders three li', () => {
-    expect(newLegend.find('li.recipes__item')).toHaveLength(3);
+    expect(newLegend.find('li')).toHaveLength(3);
   });
 
   it('renders three i', () => {
-    expect(newLegend.find('i.material-icons')).toHaveLength(3);
+    expect(newLegend.find('i')).toHaveLength(3);
   });
 });
